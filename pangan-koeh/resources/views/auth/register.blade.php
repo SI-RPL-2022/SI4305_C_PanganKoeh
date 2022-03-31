@@ -4,7 +4,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-7" id="background-auth">
-                <h1>Hello Guys! ini buat yang ijo</h1>
+                <div id="picture">
+                    <img id="logo-auth" src="{{ asset('frontend\gambar\logo-login-register.png') }}" alt="logo">
+                    <svg id="svg-auth" width="1140" height="741" viewBox="0 0 1140 741" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="403.108" cy="805.761" r="734.847" stroke="#0575E6" stroke-width="2.64333"/>
+                        <circle cx="188.998" cy="737.035" r="734.847" stroke="#0575E6" stroke-width="2.64333"/>
+                    </svg>
+                </div>
             </div>
             <div class="col-xl-5">
                 <div class="form">
@@ -37,7 +43,7 @@
                             </div>
                             <div class="mb-3">
                                 <center>
-                                    <a href="{{ url('login') }}" style="font-size: 12px">Sudah punya akun? Login disini</a>
+                                    <a href="{{ url('login') }}" id="link">Sudah punya akun? Login disini</a>
                                 </center>
                             </div>
                         </form>
