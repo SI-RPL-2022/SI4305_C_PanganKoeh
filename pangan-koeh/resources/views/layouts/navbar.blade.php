@@ -47,8 +47,8 @@
         </div>
       </form>
       <div class="span2">
-        <button class="btn btn-success rounded-pill mx-3" type="button" style="background-color: #3CD3A6; width:90.47px">Login</button>
-        <button class="btn btn-success rounded-pill me-3" type="button" style="background-color: #3CD3A6">Register</button>
+        <a class="btn btn-success rounded-pill mx-3" type="button" style="background-color: #3CD3A6; width:90.47px" href="/login">Login</a>
+        <a class="btn btn-success rounded-pill me-3" type="button" style="background-color: #3CD3A6" href="/register">Register</a>
       </div>
     </div>
   </div>
