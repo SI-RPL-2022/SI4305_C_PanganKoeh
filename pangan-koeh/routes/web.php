@@ -32,3 +32,11 @@ Route::get('/DaftarVolunteer', function () {
 Route::get('/UbahProfile', function () {
     return view('main.UbahProfile');
 });
+
+Route::get('/approval', function () {
+    return view('main.approval');
+});
+
+Route::get('/DataVolunteer', function () {
+    return view('main.DataVolunteer');
+});
