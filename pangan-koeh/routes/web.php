@@ -40,3 +40,7 @@ Route::get('/approval', function () {
 Route::get('/DataVolunteer', function () {
     return view('main.DataVolunteer');
 });
+
+Route::get('/Profile', function () {
+    return view('main.Profile');
+});
