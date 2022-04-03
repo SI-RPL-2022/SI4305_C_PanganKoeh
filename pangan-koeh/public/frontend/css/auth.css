@@ -3,14 +3,15 @@
 }
 
 #background-auth{
-    height: 625px;
+    position: fixed;
+    height: 100%;
     background: linear-gradient(180deg, #72DC58 0%, #3CD3A6 84.79%, #5DDEAF 99.99%, #3FBCAD 100%);
 }
 
 .form{
     position: absolute;
     margin-top: 180px;
-    margin-left: 150px;
+    right: 150px;
 }
 
 #link{

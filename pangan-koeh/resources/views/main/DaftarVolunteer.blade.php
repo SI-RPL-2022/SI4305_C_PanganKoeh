@@ -41,7 +41,7 @@
                     <input type="file" class="form-control" id="gambar" name="gambar">
                 </div>
                 </div>
-                <button type="submit" class="btn btn-primary" style="margin-left: 842px; padding-left: 55px; padding-right: 55px; background-color: #3CD3A6">Daftar</button>
+                <button type="submit" class="btn btn-success" style="margin-left: 842px; padding-left: 55px; padding-right: 55px; background-color: #3CD3A6">Daftar</button>
             </form>
         </div>
     </div>
