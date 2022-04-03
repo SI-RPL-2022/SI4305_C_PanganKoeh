@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main.index');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
+Route::get('/DaftarVolunteer', function () {
+    return view('main.DaftarVolunteer');
+});
+
+Route::get('/UbahProfile', function () {
+    return view('main.UbahProfile');
+});
+
+Route::get('/approval', function () {
+    return view('main.approval');
+});
+
+Route::get('/DataVolunteer', function () {
+    return view('main.DataVolunteer');
 });
