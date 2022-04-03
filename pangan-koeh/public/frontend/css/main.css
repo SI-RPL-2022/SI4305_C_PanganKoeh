@@ -28,3 +28,26 @@
 .d-flex{
     margin-right: 40px;
 }
+
+.beranda{
+    background-color: #B5F3C7; 
+}
+
+#daftarPangan{
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+#pangan{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#card-Beranda{
+    object-fit: contain;
+}
+
+#cardAbout{
+    width: 600px;
+    height: 100%;
+}

@@ -48,7 +48,7 @@
                     </div>
                   </div>
                   <div>
-                    <button type="submit" class="btn btn-primary" style="margin-left: 652px; padding-left: 55px; padding-right: 55px; background-color: #3CD3A6">Simpan</button>
+                    <button type="submit" class="btn btn-success" style="margin-left: 652px; padding-left: 55px; padding-right: 55px; background-color: #3CD3A6">Simpan</button>
                     <button type="submit" class="btn btn-secondary" style="margin-left: 10px; padding-left: 60px; padding-right: 60px">Batal</button>
                   </div>
                 </form>
