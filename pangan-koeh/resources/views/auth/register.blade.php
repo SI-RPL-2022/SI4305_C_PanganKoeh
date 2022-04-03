@@ -19,26 +19,39 @@
                         <p>Daftar untuk memulai!</p>
                     </div>
                     <div class="formulir">
-                        <form action="">
+                        <form action="/register" method="post">
+                            @csrf
+                            <input type="text" class="form-control" id="role" name="role" value="USER" hidden>
                             <div class="mb-3 input-group">
                                 <span class="input-group-text rounded-pill" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                                <input type="text" class="form-control rounded-pill" id="inputUsername" name="username" placeholder="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control rounded-pill" id="name" name="name" placeholder="Username" aria-describedby="basic-addon1" required value="{{ old('name') }}">
+                                @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="mb-3 input-group">
                                 <span class="input-group-text rounded-pill" id="basic-addon2"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control rounded-pill" id="inputEmail" name="email" placeholder="E-mail" aria-describedby="basic-addon2">
+                                <input type="email" class="form-control rounded-pill" id="email" name="email" placeholder="E-mail" aria-describedby="emailHelp"required value="{{ old('email') }}">
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="mb-3 input-group">
                                 <span class="input-group-text rounded-pill" id="basic-addon3"><i class="bi bi-lock-fill"></i></span>
-                                <input type="password" class="form-control rounded-pill" id="inputPassword" name="password" placeholder="Password" aria-describedby="basic-addon3">
-                            </div>
-                            <div class="mb-3 input-group">
-                                <span class="input-group-text rounded-pill" id="basic-addon2"><i class="bi bi-lock-fill"></i></span>
-                                <input type="password" class="form-control rounded-pill" id="cekPassword" name="cekPassword" placeholder="Konfirmasi Password" aria-describedby="basic-addon2">
+                                <input type="password" class="form-control rounded-pill" id="password" name="password" placeholder="Password" aria-describedby="basic-addon3" required>
+                                @error('password')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="mb-1">
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-success rounded-pill border border-light" type="button" style="background-color: #72DC58">Daftar</button>
+                                    <button class="btn btn-success rounded-pill border border-light" type="submit" style="background-color: #72DC58">Daftar</button>
                                 </div>
                             </div>
                             <div class="mb-3">

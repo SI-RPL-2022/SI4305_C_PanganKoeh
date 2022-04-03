@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +19,24 @@ Route::get('/', function () {
     return view('main.index');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
+// Route::get('/login', function () {
+//     return view('auth.login');
+// });
+
+// Route::get('/register', function () {
+//     return view('auth.register');
+// });
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::middleware('admin')->group(function () {
+    Route::get('/loginadmin', [LoginAdminController::class, 'index']);
+    Route::post('/loginadmin', [LoginAdminController::class, 'authenticate']);
 });
 
-Route::get('/register', function () {
-    return view('auth.register');
+Route::middleware('user')->group(function () {
+    Route::get('/home', [HomeController::class, 'index']);
 });

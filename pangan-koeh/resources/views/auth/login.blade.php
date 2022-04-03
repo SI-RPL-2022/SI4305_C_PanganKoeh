@@ -19,18 +19,24 @@
                         <p>Selamat Datang Kembali!</p>
                     </div>
                     <div class="formulir">
-                        <form action="">
+                        <form action="/login" method="post">
+                            @csrf
                             <div class="mb-3 input-group">
                                 <span class="input-group-text rounded-pill" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control rounded-pill" id="inputEmail" name="email" placeholder="E-mail" aria-describedby="basic-addon1">
+                                <input type="email" class="form-control rounded-pill" id="email" name="email" placeholder="E-mail" aria-describedby="emailHelp"autofocus required value="{{ old('email') }}">
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="mb-3 input-group">
                                 <span class="input-group-text rounded-pill" id="basic-addon2"><i class="bi bi-lock-fill"></i></span>
-                                <input type="password" class="form-control rounded-pill" id="inputPassword" name="password" placeholder="Password" aria-describedby="basic-addon2">
+                                <input type="password" class="form-control rounded-pill" id="password" name="password" placeholder="Password" aria-describedby="basic-addon2" required>
                             </div>
                             <div class="mb-1">
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-success rounded-pill border border-light" type="button" style="background-color: #72DC58">Login</button>
+                                    <button class="btn btn-success rounded-pill border border-light" type="submit" style="background-color: #72DC58">Login</button>
                                 </div>
                             </div>
                             <div class="mb-3">
