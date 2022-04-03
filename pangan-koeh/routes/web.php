@@ -24,3 +24,11 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register');
 });
+
+Route::get('/DaftarVolunteer', function () {
+    return view('main.DaftarVolunteer');
+});
+
+Route::get('/UbahProfile', function () {
+    return view('main.UbahProfile');
+});
