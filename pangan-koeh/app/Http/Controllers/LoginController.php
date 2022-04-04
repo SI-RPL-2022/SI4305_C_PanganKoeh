@@ -16,12 +16,24 @@ class LoginController extends Controller
     {
         $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required',
+            'role' => 'required|in:admin,user'
         ]);
+
+        $role = null;
+        if ($request->role == 'USER') {
+            $role = 'USER';
+        } elseif ($request->role == 'ADM') {
+            $role = 'ADM';
+        }
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+            if ($request->role == 'USER') {
+                return redirect()->intended('/home');
+            } elseif ($request->role == 'ADM') {
+                return redirect()->intended('/DaftarVolunteer');
+            }
         }
 
         return back()->with('loginError', 'Login gagal!, silakan coba lagi.');

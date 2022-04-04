@@ -18,16 +18,15 @@ class user
     public function handle($request, Closure $next)
     {
 
-        if (Auth::check()) {
-            if (Auth::user()->role != 'USER') {
-                Auth::logout();
+        if (!auth()->check() || !auth()->user()->role = 'ADM') {
+            Auth::logout();
 
-                $request->session()->invalidate();
+            $request->session()->invalidate();
 
-                $request->session()->regenerateToken();
-                return redirect('/');
-            }
+            $request->session()->regenerateToken();
+            return redirect('/');
         }
+
 
         return $next($request);
     }

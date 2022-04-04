@@ -9,6 +9,7 @@ use App\Http\Controllers\DataVolunteerController;
 use App\Http\Controllers\DaftarVolunteerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UbahProfileController;
+use App\Http\Controllers\defController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,7 @@ use App\Http\Controllers\UbahProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('main.index');
-});
+Route::get('/', [defController::class, 'index'])->name('pertama');
 
 // Route::get('/login', function () {
 //     return view('auth.login');
@@ -40,8 +39,6 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::middleware('admin')->group(function () {
-    Route::get('/loginadmin', [LoginAdminController::class, 'index']);
-    Route::post('/loginadmin', [LoginAdminController::class, 'authenticate']);
     Route::get('/approval', [ApprovalController::class, 'index']);
     Route::get('/DataVolunteer', [DataVolunteerController::class, 'index']);
 });
