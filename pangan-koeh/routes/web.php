@@ -40,3 +40,23 @@ Route::middleware('admin')->group(function () {
 Route::middleware('user')->group(function () {
     Route::get('/home', [HomeController::class, 'index']);
 });
+
+Route::get('/DaftarVolunteer', function () {
+    return view('main.DaftarVolunteer');
+});
+
+Route::get('/UbahProfile', function () {
+    return view('main.UbahProfile');
+});
+
+Route::get('/approval', function () {
+    return view('main.approval');
+});
+
+Route::get('/DataVolunteer', function () {
+    return view('main.DataVolunteer');
+});
+
+Route::get('/Profile', function () {
+    return view('main.Profile');
+});
