@@ -51,7 +51,7 @@
                             </div>
                             <div class="mb-1">
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-success rounded-pill border border-light" type="submit" style="background-color: #72DC58">Daftar</button>
+                                    <button class="btn btn-success rounded-pill border border-light" type="submit" style="background-color: #3CD3A6">Daftar</button>
                                 </div>
                             </div>
                             <div class="mb-3">

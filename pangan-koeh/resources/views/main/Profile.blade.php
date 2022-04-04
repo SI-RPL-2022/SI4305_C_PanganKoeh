@@ -16,15 +16,15 @@
             </div>
             <div class="col-12 col-md-6 p-5 mt-2">
                 <h5 style="font-weight: bold; font-size:15px">Username: <h5>
-                    <p style="font-size:15px; font-weight: normal">muthiqonitaa</p>
+                    <p style="font-size:15px; font-weight: normal"><!--isinya hanya contoh, aslinya pake database :) -->muthiqonitaa</p>
                 <h5 style="font-weight: bold; font-size:15px">Email: <h5>
-                    <p style="font-size:15px; font-weight: normal">muthiqonita@gmail.com</p>
+                    <p style="font-size:15px; font-weight: normal"><!--isinya hanya contoh, aslinya pake database :) -->muthiqonita@gmail.com</p>
                 <h5 style="font-weight: bold; font-size:15px">No.Telp/HP<h5>
                     <p style="font-size:15px; font-weight: normal"></p>
                 <h5 style="font-weight: bold; font-size:15px">Alamat<h5>
-                    <p style="font-size:15px; font-weight: normal">Perumahan Mutiara View Blok A5 no 9</p>
+                    <p style="font-size:15px; font-weight: normal"><!--isinya hanya contoh, aslinya pake database :) -->Perumahan Mutiara View Blok A5 no 9</p>
                 <h5 style="font-weight: bold; font-size:15px">Password<h5>
-                    <p style="font-size:15px; font-weight: normal">****</p>
+                    <p style="font-size:15px; font-weight: normal"><!--isinya hanya contoh, aslinya pake database :) -->****</p>
             </div>
             </div>
             <button type="button" class="btn" id="tombolUbah" data-toggle="modal" data-target="#ubahModal" style="margin-top:10px; width:430px; background-color: #3CD3A6; color: white">Ubah Profile</button>
