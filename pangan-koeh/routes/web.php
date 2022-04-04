@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ApprovalController;
+use App\Http\Controllers\DataVolunteerController;
+use App\Http\Controllers\DaftarVolunteerController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UbahProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +33,7 @@ Route::get('/', function () {
 //     return view('auth.register');
 // });
 
+Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/register', [RegisterController::class, 'index']);
@@ -35,28 +42,13 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::middleware('admin')->group(function () {
     Route::get('/loginadmin', [LoginAdminController::class, 'index']);
     Route::post('/loginadmin', [LoginAdminController::class, 'authenticate']);
+    Route::get('/approval', [ApprovalController::class, 'index']);
+    Route::get('/DataVolunteer', [DataVolunteerController::class, 'index']);
 });
 
 Route::middleware('user')->group(function () {
     Route::get('/home', [HomeController::class, 'index']);
-});
-
-Route::get('/DaftarVolunteer', function () {
-    return view('main.DaftarVolunteer');
-});
-
-Route::get('/UbahProfile', function () {
-    return view('main.UbahProfile');
-});
-
-Route::get('/approval', function () {
-    return view('main.approval');
-});
-
-Route::get('/DataVolunteer', function () {
-    return view('main.DataVolunteer');
-});
-
-Route::get('/Profile', function () {
-    return view('main.Profile');
+    Route::get('/DaftarVolunteer', [DaftarVolunteerController::class, 'index']);
+    Route::get('/UbahProfile', [UbahProfileController::class, 'index']);
+    Route::get('/Profile', [ProfileController::class, 'index']);
 });

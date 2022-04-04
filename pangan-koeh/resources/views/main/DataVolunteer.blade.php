@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    @include('layouts.navbar')
+    @include('layouts.navbarlogin')
     <div class="container-fluid" style=" padding-left: 160px; padding-top: 100px">
             <div class="card p-3 mb-5 bg-body rounded" style="width: 60rem;">
                 <table class="table">

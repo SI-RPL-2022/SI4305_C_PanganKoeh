@@ -2,6 +2,19 @@
 
 @section('content')
     <div class="container-fluid">
+        @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
+        @if (session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+            {{ session('loginError') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         <div class="row">
             <div class="col-xl-7" id="background-auth">
                 <div id="picture">

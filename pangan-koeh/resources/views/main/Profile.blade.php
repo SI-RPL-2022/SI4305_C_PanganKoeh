@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    @include('layouts.navbar')
+    @include('layouts.navbarlogin')
 
 <section class="container">
         <form class="shadow-lg p-3 mb-5 bg-white rounded-0 justify-content-center" style="margin-top: 40px; width: 900px; height: 550px; margin-left:8vw">
