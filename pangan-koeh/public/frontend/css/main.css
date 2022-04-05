@@ -46,6 +46,9 @@
 #card-Beranda{
     object-fit: contain;
 }
+#card-informasi{
+    object-fit: fill;
+}
 
 #cardAbout{
     width: 600px;

@@ -28,9 +28,9 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 //     return view('auth.login');
 // });
 
-// Route::get('/register', function () {
-//     return view('auth.register');
-// });
+ Route::get('/informasi', function () {
+     return view('main.informasi');
+});
 
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
