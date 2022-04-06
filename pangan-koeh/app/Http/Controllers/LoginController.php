@@ -14,25 +14,19 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
+
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
-            'role' => 'required|in:admin,user'
         ]);
 
-        $role = null;
-        if ($request->role == 'USER') {
-            $role = 'USER';
-        } elseif ($request->role == 'ADM') {
-            $role = 'ADM';
-        }
-
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            if ($request->role == 'USER') {
-                return redirect()->intended('/home');
-            } elseif ($request->role == 'ADM') {
+            if ($request->email == 'admin@gmail.com') {
+                $request->session()->regenerate();
                 return redirect()->intended('/DaftarVolunteer');
+            } elseif ($request->email != 'admin@gmail.com') {
+                $request->session()->regenerate();
+                return redirect()->intended('/home');
             }
         }
 
