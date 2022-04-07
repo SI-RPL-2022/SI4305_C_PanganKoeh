@@ -175,14 +175,6 @@
                       <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
                     </div>
                   </div>
-                  <div class="card px-3" style="width: 15rem; margin-left: 10px; margin-right:10px">
-                    <img src="frontend\gambar\Pangan\minyakgoreng.jpg" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title">Contoh</h5>
-                      <p class="card-text">Nanti card ini di-looping</p>
-                      <a href="#" class="btn btn-success">Go somewhere</a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
