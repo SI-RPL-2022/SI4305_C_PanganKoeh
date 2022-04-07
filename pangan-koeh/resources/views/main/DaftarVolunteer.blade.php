@@ -10,29 +10,29 @@
     <div class="container" style="padding-top: 60px; padding-left: 50px; padding-bottom: 40px">
     <div class="card" style="width: 65rem;">
         <div class="card-body" style="padding-top: 10px;">
-            <form>
+            <form action="/DaftarVolunteer" method="post" >
                 <div class="row mb-3">
-                <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                <label for="name" class="col-sm-2 col-form-label">Nama Lengkap</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda">
                 </div>
                 </div>
                 <div class="row mb-3">
                 <label for="ttl" class="col-sm-2 col-form-label">TTL</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="ttl" placeholder="Masukkan tempat tanggal lahir Anda">
+                    <input type="text" class="form-control" id="ttl" name="ttl" placeholder="Masukkan tempat tanggal lahir Anda">
                 </div>
                 </div>
                 <div class="row mb-3">
                 <label for="jk" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="jk" placeholder="Masukkan jenis kelamin Anda">
+                    <input type="text" class="form-control" id="jk" name="jk" placeholder="Masukkan jenis kelamin Anda">
                 </div>
                 </div>
                 <div class="row mb-3">
                 <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="pekerjaan" placeholder="Masukkan pekerjaan Anda">
+                    <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" placeholder="Masukkan pekerjaan Anda">
                 </div>
                 </div>
                 <div class="row mb-3">
