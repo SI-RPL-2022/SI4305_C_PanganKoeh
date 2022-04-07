@@ -48,7 +48,7 @@
             <div class="carousel-inner" id="pangan">
               <div class="carousel-item active">
                 <div class="row">
-                  <div class="card px-3" style="width: 15rem; margin-left: 10px">
+                  <div class="card px-3" style="width: 15rem;">
                     <img src="frontend\gambar\Pangan\minyakgoreng.jpg" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title">Contoh</h5>
