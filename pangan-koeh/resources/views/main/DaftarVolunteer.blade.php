@@ -10,7 +10,7 @@
     <div class="container" style="padding-top: 60px; padding-left: 50px; padding-bottom: 40px">
     <div class="card" style="width: 65rem;">
         <div class="card-body" style="padding-top: 10px;">
-            <form>
+            <form action="/DaftarVolunteer" method="post" >
                 <div class="row mb-3">
                 <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                 <div class="col-sm-10">
