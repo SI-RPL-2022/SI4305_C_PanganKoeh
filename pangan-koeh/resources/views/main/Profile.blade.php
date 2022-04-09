@@ -29,7 +29,7 @@
             </div>
             <button type="button" class="btn" id="tombolUbah" data-toggle="modal" data-target="#ubahModal" style="margin-top:10px; width:430px; background-color: #3CD3A6; color: white">Ubah Profile</button>
             
-            <a href="/DaftarVolunteer" type="button" class="btn" style="margin-top:10px; width:430px; background-color: #677A68; color: white">Daftar Volunteer</a>
+            <a href="/DaftarVolunteer/create" type="button" class="btn" style="margin-top:10px; width:430px; background-color: #677A68; color: white">Daftar Volunteer</a>
         </form>
 
 </section>

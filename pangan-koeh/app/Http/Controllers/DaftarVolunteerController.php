@@ -10,4 +10,9 @@ class DaftarVolunteerController extends Controller
     {
         return view('main.DaftarVolunteer');
     }
+
+    // public function store(Request $request)
+    // {
+    //     $request
+    // }
 }

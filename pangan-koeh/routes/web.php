@@ -10,6 +10,7 @@ use App\Http\Controllers\DaftarVolunteerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UbahProfileController;
 use App\Http\Controllers\defController;
+use App\Http\Controllers\RegisterVolunteerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +29,8 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 //     return view('auth.login');
 // });
 
- Route::get('/informasi', function () {
-     return view('main.informasi');
+Route::get('/informasi', function () {
+    return view('main.informasi');
 });
 
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -46,6 +47,8 @@ Route::middleware('admin')->group(function () {
 Route::middleware('user')->group(function () {
     Route::get('/home', [HomeController::class, 'index']);
     Route::get('/DaftarVolunteer', [DaftarVolunteerController::class, 'index']);
+    Route::post('/DaftarVolunteer', [DaftarVolunteerController::class, 'store']);
     Route::get('/UbahProfile', [UbahProfileController::class, 'index']);
     Route::get('/Profile', [ProfileController::class, 'index']);
+    Route::resource('/DaftarVolunteer', RegisterVolunteerController::class);
 });
