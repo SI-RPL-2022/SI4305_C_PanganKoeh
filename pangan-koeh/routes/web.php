@@ -29,8 +29,8 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 //     return view('auth.login');
 // });
 
-Route::get('/informasi', function () {
-    return view('main.informasi');
+Route::get('/hargaPangan', function () {
+    return view('main.Dashboard');
 });
 
 Route::post('/logout', [LoginController::class, 'logout']);
