@@ -48,7 +48,7 @@
             <div class="carousel-inner" id="pangan">
               <div class="carousel-item active">
                 <div class="row">
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\1.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Minyak Goreng Sanco /liter</b></h5>
@@ -56,7 +56,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\2.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Beras Pandan Wangi /kg</b></h5>
@@ -64,7 +64,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\3.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Cabe Hijau Besar /ons</b></h5>
@@ -72,7 +72,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\4.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Ayam Potong /kg</b></h5>
@@ -80,7 +80,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\5.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Bawang Merah /ons</b></h5>
@@ -92,7 +92,7 @@
 
               <div class="carousel-item">
                 <div class="row">
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Tomat /kg</b></h5>
@@ -100,7 +100,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\7.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Gula Gulaku /kg</b></h5>
@@ -108,7 +108,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Daging Sapi /kg</b></h5>
@@ -116,7 +116,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\9.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Cabe Rawit /ons</b></h5>
@@ -124,7 +124,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\10.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Paprika /kg</b></h5>
@@ -136,7 +136,7 @@
 
               <div class="carousel-item">
                 <div class="row">
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\11.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Cabe Merah /ons</b></h5>
@@ -144,7 +144,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\12.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Sayur Sawi Hijau /kg</b></h5>
@@ -152,7 +152,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\13.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Sayur Kangkung /kg</b></h5>
@@ -160,7 +160,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\14.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Bawang Bombay /kg</b></h5>
@@ -168,7 +168,7 @@
                     </div>
                   </div>
 
-                  <div align="center" class="card px-3 py-3" style="width: 12rem; margin-left:20px">
+                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
                     <img src="frontend\gambar\Pangan\15.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Daun Seledri /ons</b></h5>

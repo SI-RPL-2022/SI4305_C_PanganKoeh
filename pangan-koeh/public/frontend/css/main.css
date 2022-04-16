@@ -34,7 +34,7 @@
 }
 
 #daftarPangan{
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 80px;
 }
 
@@ -57,4 +57,11 @@
 
 #display{
     background-color: #677A68;
+    color: #FFFFFF;
+}
+
+#fotoPasar{
+    height: 120px;
+    width: 165px;
+    object-fit: cover;
 }
