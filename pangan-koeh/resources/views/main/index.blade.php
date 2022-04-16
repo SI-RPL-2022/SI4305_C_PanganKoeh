@@ -188,6 +188,8 @@
             </button>
           </div>
       </section>
+      
+      <center><hr class="batas shadow-lg" style="width: 80%;"></center>
 
       <section class="about py-5">
         <center class="py-5">
