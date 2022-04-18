@@ -10,7 +10,7 @@
     <div class="container" style="padding-top: 60px; padding-left: 50px; padding-bottom: 40px">
     <div class="card" style="width: 65rem;">
         <div class="card-body" style="padding-top: 10px;">
-            <form action="/DaftarVolunteer" method="post" >
+            <form action="/DaftarVolunteer" method="post" enctype="multipart/form-data" >
                 @csrf
                 <input type="hidden" class="form-control" id="id" name="id" value="{{ auth()->user()->id }}" readonly>
                 <div class="row mb-3">

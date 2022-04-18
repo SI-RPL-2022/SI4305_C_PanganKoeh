@@ -41,10 +41,11 @@ class RegisterVolunteerController extends Controller
             'ttl' => 'required|max:255',
             'jk' => 'required|max:255',
             'pekerjaan' => 'required|max:255',
-            'gambar' => 'required|max:255'
+            'gambar' => 'image|file|max:3072',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['gambar'] = $request->file('gambar')->store('post-images');
 
         // if ($validatedData['name'] != auth()->user()->name) {
         //     return redirect()->intended('Profile');
