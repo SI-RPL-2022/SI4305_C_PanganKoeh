@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Volunteer;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegisterVolunteerController extends Controller
@@ -40,14 +41,26 @@ class RegisterVolunteerController extends Controller
             'ttl' => 'required|max:255',
             'jk' => 'required|max:255',
             'pekerjaan' => 'required|max:255',
-            'peran' => 'required|max:255',
             'gambar' => 'required|max:255'
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
 
+        // if ($validatedData['name'] != auth()->user()->name) {
+        //     return redirect()->intended('Profile');
+        // }
+        // return back()->with('namatidaksama', 'Harap Memasukan Identitas yang sesuai');
+
+
         Volunteer::create($validatedData);
-        return redirect('/DaftarVolunteer');
+        $data = User::find($request->id);
+        // // dd($data);
+        // // return $request->input();
+        $data->role = "WAIT";
+        $data->save();
+        // auth()->user()->role == "WAIT";
+
+        return redirect('Profile');
         // return $request;
     }
 

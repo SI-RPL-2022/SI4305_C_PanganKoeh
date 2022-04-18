@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->index('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('peran');
             $table->string('name');
             $table->string('ttl');
             $table->string('jk');

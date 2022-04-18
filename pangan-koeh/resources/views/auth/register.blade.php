@@ -41,6 +41,24 @@
                                 @enderror
                             </div>
                             <div class="mb-3 input-group">
+                                <span class="input-group-text rounded-pill" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+                                <input type="text" class="form-control rounded-pill" id="no" name="no" placeholder="No.Telpon/HP" aria-describedby="basic-addon1" required value="{{ old('no') }}">
+                                @error('no')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="mb-3 input-group">
+                                <span class="input-group-text rounded-pill" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+                                <input type="text" class="form-control rounded-pill" id="alamat" name="alamat" placeholder="Alamat" aria-describedby="basic-addon1" required value="{{ old('alamat') }}">
+                                @error('alamat')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="mb-3 input-group">
                                 <span class="input-group-text rounded-pill" id="basic-addon3"><i class="bi bi-lock-fill"></i></span>
                                 <input type="password" class="form-control rounded-pill" id="password" name="password" placeholder="Password" aria-describedby="basic-addon3" required>
                                 @error('password')
