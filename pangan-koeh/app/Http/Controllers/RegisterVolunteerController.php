@@ -99,6 +99,14 @@ class RegisterVolunteerController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'no' => 'required|max:255',
+            'alamat' => 'required|max:255',
+        ]);
+        User::where('id', $request->id)->update($validatedData);
+        return redirect('/Profile');
     }
 
     /**
