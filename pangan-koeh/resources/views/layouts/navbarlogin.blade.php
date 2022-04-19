@@ -50,6 +50,9 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-sm-end" aria-labelledby="navbarDropdown" style="list-style: none;">
           <li><a class="dropdown-item" href="/Profile">My Profile</a></li>
+          @if (Auth::user()->fresh()->role == 'ADM')
+            <li><a class="dropdown-item" href="/approval">Approval</a></li>
+          @endif
           <li><hr class="dropdown-divider"></li>
           <li>
             <a class="dropdown-item" href="#">

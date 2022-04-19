@@ -33,8 +33,10 @@
                             <td>{{ $volunteer->pekerjaan }}</td>
                             <td><a href="{{ asset('storage/' . $volunteer->gambar) }}" target="blank">foto ktp</a></td>
                             <td align="center">
-                            <a href="#" class="btn btn-success">Terima</a>
-                            <a href="#" class="btn btn-danger">Tolak</a>
+                                <div class="d-grid my-auto">
+                                    <a href="#" class="btn btn-success btn-sm">Terima</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Tolak</a>
+                                </div>
                             </td>
                         </tr>
                     @endif
