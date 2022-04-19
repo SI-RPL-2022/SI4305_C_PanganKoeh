@@ -32,6 +32,9 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 Route::get('/hargaPangan', function () {
     return view('main.Dashboard');
 });
+Route::get('/informasi', function () {
+    return view('main.informasi');
+});
 
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');

@@ -23,15 +23,15 @@
           <a class="nav-link" href="#cardAbout">Tentang Kami</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Informasi</a>
+          <a class="nav-link" href="/informasi">Informasi</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Pasar
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Pasar A</a></li>
-            <li><a class="dropdown-item" href="#">Pasar B</a></li>
+            <li><a class="dropdown-item" href="/hargaPangan">Pasar A</a></li>
+            <li><a class="dropdown-item" href="/hargaPangan">Pasar B</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -44,13 +44,23 @@
           <button class="btn" style="background-color: #3CD3A6" type="submit"><i class="bi bi-search" style="color: white"></i></button>
         </div>
       </form>
-      <form action="/logout" method="POST">
-        @csrf
-        <div class="span2">
-          <button class="btn btn-success rounded-pill mx-3" type="submit" style="background-color: #3CD3A6; width:90.47px">Logout</button>
-        </div>
-      </form>
-      
+      <li class="nav-item dropdown" style="list-style: none; max-width: 255px;">
+        <a class="nav-link dropdown-toggle" data-bs-display="static" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ Auth::user()->fresh()->name }}
+        </a>
+        <ul class="dropdown-menu dropdown-menu-sm-end" aria-labelledby="navbarDropdown" style="list-style: none;">
+          <li><a class="dropdown-item" href="/Profile">My Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <form action="/logout" method="POST">
+                @csrf
+                <button class="dropdown-item" type="submit"><b>Logout</b></button>
+              </form>
+            </a>
+          </li>
+        </ul>
+      </li>
     </div>
   </div>
 </nav>

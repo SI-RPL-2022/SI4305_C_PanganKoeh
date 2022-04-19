@@ -5,7 +5,11 @@
 @endsection
 
 @section('content')
-    @include('layouts.navbar')
+    @if (Auth::user())
+        @include('layouts.navbarlogin')
+    @else
+        @include('layouts.navbar')
+    @endif
 
     <div class="beranda">
         <div class="container" style="padding-top: 80px; padding-bottom: 80px">

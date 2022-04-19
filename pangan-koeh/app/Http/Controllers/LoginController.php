@@ -26,7 +26,7 @@ class LoginController extends Controller
                 return redirect()->intended('/DaftarVolunteer');
             } elseif ($request->email != 'admin@gmail.com') {
                 $request->session()->regenerate();
-                return redirect()->intended('/home');
+                return redirect()->intended('/');
             }
         }
 

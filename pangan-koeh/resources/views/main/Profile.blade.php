@@ -25,10 +25,14 @@
                     <h5 style="font-weight: bold; font-size:15px">Alamat<h5>
                         <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->alamat }}</p>
                 </div>
-                <button type="button" class="btn" id="tombolUbah" data-toggle="modal" data-target="#ubahModal" style="margin-top:10px; width:430px; background-color: #3CD3A6; color: white">Ubah Profile</button>
+                <div class="d-grid col-6">
+                    <button type="button" class="btn" id="tombolUbah" data-toggle="modal" data-target="#ubahModal" style="margin-top:10px; background-color: #3CD3A6; color: white">Ubah Profile</button>
+                </div>
+                <div class="d-grid col-6">
+                    <a href="/DaftarVolunteer/create" type="button" class="btn" style="margin-top:10px; background-color: #677A68; color: white">Daftar Volunteer</a>
+                </div>
                 
-                <a href="/DaftarVolunteer/create" type="button" class="btn" style="margin-top:10px; width:430px; background-color: #677A68; color: white">Daftar Volunteer</a>
-                
+            
             @endif
             @if (Auth::user()->fresh()->role == 'WAIT')
                 <div class="col-12 col-md-6 p-5 mt-2">
@@ -41,8 +45,9 @@
                         <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->no }}</p>
                     <h5 style="font-weight: bold; font-size:15px">Alamat<h5>
                         <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->alamat }}</p>
-                    <button type="button" class="btn" id="tombolUbah" data-toggle="modal" data-target="#ubahModal" style="margin-top:10px; width:430px; background-color: #3CD3A6; color: white">Ubah Profile</button>
-      
+                    <div class="d-grid">
+                        <button type="button" class="btn" id="tombolUbah" data-toggle="modal" data-target="#ubahModal" style="margin-top:10px; background-color: #3CD3A6; color: white">Ubah Profile</button>
+                    </div>
                 </div>
                 
                 

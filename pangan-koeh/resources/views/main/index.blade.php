@@ -5,7 +5,11 @@
 @endsection
 
 @section('content')
-    @include('layouts.navbar')
+    @if (Auth::user())
+      @include('layouts.navbarlogin')
+    @else
+      @include('layouts.navbar')
+    @endif
     <div class="beranda">
       <section>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -87,14 +91,6 @@
                       <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 3.200,-</a>
                     </div>
                   </div>
-
-                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
-                    <img src="frontend\gambar\Pangan\16.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Minyak Goreng Sania /liter</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 19.000,-</a>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -139,14 +135,6 @@
                       <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
                     </div>
                   </div>
-
-                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
-                    <img src="frontend\gambar\Pangan\17.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Wotrtel /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 10.000,-</a>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -189,14 +177,6 @@
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Daun Seledri /ons</b></h5>
                       <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 px-3 py-3" style="width: 12rem; margin-left:20px">
-                    <img src="frontend\gambar\Pangan\18.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Sayur Bayam /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 12.800,-</a>
                     </div>
                   </div>
                 </div>
