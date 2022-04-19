@@ -10,17 +10,18 @@
     <div class="container" style="padding-top: 60px; padding-left: 50px; padding-bottom: 40px">
         <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
-                <form>
+                <form method="POST">
+                  @csrf
                   <div class="row mb-3">
-                    <label for="username" class="col-sm-2 col-form-label">Username</label>
+                    <label for="name" class="col-sm-2 col-form-label">Username</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="username">
+                      <input type="text" class="form-control" id="name" name="name">
                     </div>
                   </div>
                   <div class="row mb-3">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="email">
+                      <input type="text" class="form-control" id="email" name="email">
                     </div>
                   </div>
                   <div class="row mb-3">

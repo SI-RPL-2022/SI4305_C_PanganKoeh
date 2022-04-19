@@ -23,7 +23,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             if ($request->email == 'admin@gmail.com') {
                 $request->session()->regenerate();
-                return redirect()->intended('/DaftarVolunteer');
+                return redirect()->intended('/DataVolunteer');
             } elseif ($request->email != 'admin@gmail.com') {
                 $request->session()->regenerate();
                 return redirect()->intended('/');
