@@ -12,6 +12,7 @@
                 <div class="card-body" style="padding-top: 10px;">
                 <form method="POST">
                   @csrf
+                  <input type="hidden" class="form-control" id="id" name="id" value="{{ auth()->user()->id }}" readonly>
                   <div class="row mb-3">
                     <label for="name" class="col-sm-2 col-form-label">Username</label>
                     <div class="col-sm-10">

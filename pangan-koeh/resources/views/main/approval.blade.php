@@ -18,19 +18,31 @@
                     <th scope="col">KTP</th>
                     <th scope="col">Aksi</th>
                 </tr>
+                @php
+                    $x1=0;
+                @endphp
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td align="center">
-                        <a href="#" class="btn btn-success">Terima</a>
-                        <a href="#" class="btn btn-danger">Tolak</a>
-                        </td>
-                    </tr>
+                    @foreach ($users as $user)
+                    @foreach ($volunteers as $volunteer)
+                    @if ($user->role == 'WAIT')
+                        <tr>
+                            <td>{{ ++$x1 }}</td>
+                            <td>{{ $volunteer->name }}</td>
+                            <td>{{ $volunteer->ttl }}</td>
+                            <td>{{ $volunteer->jk }}</td>
+                            <td>{{ $volunteer->pekerjaan }}</td>
+                            <td><a href="{{ asset('storage/' . $volunteer->gambar) }}" target="blank">foto ktp</a></td>
+                            <td align="center">
+                            <a href="#" class="btn btn-success">Terima</a>
+                            <a href="#" class="btn btn-danger">Tolak</a>
+                            </td>
+                        </tr>
+                    @endif
+                    @endforeach
+                    @endforeach
+                    
+                    
+                    
                 </tbody>
             </div>
     </div>
