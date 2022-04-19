@@ -33,8 +33,10 @@
                             <td>{{ $volunteer->pekerjaan }}</td>
                             <td><a href="{{ asset('storage/' . $volunteer->gambar) }}" target="blank">foto ktp</a></td>
                             <td align="center">
-                            <a href="#" class="btn btn-success">Terima</a>
-                            <a href="#" class="btn btn-danger">Tolak</a>
+                            <div>
+                                <a href="#" class="btn btn-success">Terima</a>
+                                <a href="#" class="btn btn-danger">Tolak</a>
+                            </div>
                             </td>
                             
                         </tr>

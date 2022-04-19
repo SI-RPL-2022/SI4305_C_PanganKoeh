@@ -29,7 +29,7 @@
                 <div class="row mb-3">
                 <label for="jk" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="jk" name="jk" placeholder="Masukkan jenis kelamin Anda">
+                    <input type="text" class="form-control" id="jk" name="jk" placeholder="Masukkan jenis kelamin Anda" autocomplete="off">
                 </div>
                 </div>
                 <div class="row mb-3">
