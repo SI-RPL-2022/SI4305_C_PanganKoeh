@@ -12,6 +12,7 @@
         <div class="card-body" style="padding-top: 10px;">
             <form action="/DaftarVolunteer" method="post" enctype="multipart/form-data" >
                 @csrf
+                <input type="hidden" class="form-control" id="role" name="role" value="WAIT" readonly>
                 <input type="hidden" class="form-control" id="id" name="id" value="{{ auth()->user()->id }}" readonly>
                 <div class="row mb-3">
                 <label for="name" class="col-sm-2 col-form-label">Nama Lengkap</label>

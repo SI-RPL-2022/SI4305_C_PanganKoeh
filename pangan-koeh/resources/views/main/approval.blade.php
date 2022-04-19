@@ -22,10 +22,10 @@
                     $x1=0;
                 @endphp
                 <tbody>
-                    @foreach ($users as $user)
                     @foreach ($volunteers as $volunteer)
-                    @if ($user->role == 'WAIT')
+                    @if ($volunteer->role == 'WAIT')
                         <tr>
+                            
                             <td>{{ ++$x1 }}</td>
                             <td>{{ $volunteer->name }}</td>
                             <td>{{ $volunteer->ttl }}</td>
@@ -33,14 +33,12 @@
                             <td>{{ $volunteer->pekerjaan }}</td>
                             <td><a href="{{ asset('storage/' . $volunteer->gambar) }}" target="blank">foto ktp</a></td>
                             <td align="center">
-                                <div class="d-grid my-auto">
-                                    <a href="#" class="btn btn-success btn-sm">Terima</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Tolak</a>
-                                </div>
+                            <a href="#" class="btn btn-success">Terima</a>
+                            <a href="#" class="btn btn-danger">Tolak</a>
                             </td>
+                            
                         </tr>
                     @endif
-                    @endforeach
                     @endforeach
                     
                     

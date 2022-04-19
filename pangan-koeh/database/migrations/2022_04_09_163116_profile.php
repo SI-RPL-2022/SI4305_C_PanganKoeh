@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('ttl');
             $table->string('jk');
             $table->string('pekerjaan');
+            $table->string('role');
             $table->string('gambar');
             $table->rememberToken();
             $table->timestamps();

@@ -42,6 +42,7 @@ class RegisterVolunteerController extends Controller
             'jk' => 'required|max:255',
             'pekerjaan' => 'required|max:255',
             'gambar' => 'image|file|max:3072',
+            'role' => 'required|max:255'
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -84,7 +85,9 @@ class RegisterVolunteerController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('main.UbahProfile', [
+            'user' => User::where('id', $id)->get()
+        ]);
     }
 
     /**
@@ -96,7 +99,6 @@ class RegisterVolunteerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**
