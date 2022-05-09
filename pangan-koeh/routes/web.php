@@ -55,3 +55,5 @@ Route::middleware('user')->group(function () {
     Route::get('/Profile', [ProfileController::class, 'index']);
     Route::resource('/DaftarVolunteer', RegisterVolunteerController::class);
 });
+
+Route::post('/InputDataPangan', [InputDataPanganController::class, 'store']);
