@@ -35,6 +35,9 @@ Route::get('/hargaPangan', function () {
 Route::get('/informasi', function () {
     return view('main.informasi');
 });
+Route::get('/input', function () {
+    return view('main.InputDataPangan');
+});
 
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');

@@ -32,18 +32,30 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/hargaPangan">Pasar A</a></li>
             <li><a class="dropdown-item" href="/hargaPangan">Pasar B</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/hargaPangan">Pasar Terdekat</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Perbandingan Harga</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <div class="input-group">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" style="background-color: #3CD3A6" type="submit"><i class="bi bi-search" style="color: white"></i></button>
-        </div>
-      </form>
+
+      <li class="nav-item" style="list-style: none">
+        <a class="nav-link me-3 px-2" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item" style="list-style: none">
+        <a class="nav-link me-3 px-2" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+        </a>
+      </li>
+      
       <li class="nav-item dropdown" style="list-style: none; max-width: 255px;">
         <a class="nav-link dropdown-toggle" data-bs-display="static" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           {{ Auth::user()->fresh()->name }}
