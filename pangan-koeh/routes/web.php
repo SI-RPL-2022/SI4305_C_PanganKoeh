@@ -35,7 +35,7 @@ Route::get('/hargaPangan', function () {
 Route::get('/informasi', function () {
     return view('main.informasi');
 });
-Route::get('/input', function () {
+Route::get('/InputDataPangan', function () {
     return view('main.InputDataPangan');
 });
 
