@@ -38,6 +38,9 @@ Route::get('/informasi', function () {
 Route::get('/InputDataPangan', function () {
     return view('main.InputDataPangan');
 });
+Route::get('/PasarTerdekat', function () {
+    return view('main.PasarTerdekat');
+});
 
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');

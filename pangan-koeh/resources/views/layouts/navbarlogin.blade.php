@@ -33,7 +33,7 @@
             <li><a class="dropdown-item" href="/hargaPangan">Pasar A</a></li>
             <li><a class="dropdown-item" href="/hargaPangan">Pasar B</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/hargaPangan">Pasar Terdekat</a></li>
+            <li><a class="dropdown-item" href="/PasarTerdekat">Pasar Terdekat</a></li>
           </ul>
         </li>
         <li class="nav-item">
