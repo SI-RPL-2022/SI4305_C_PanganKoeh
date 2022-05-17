@@ -8,7 +8,7 @@
     @include('layouts.navbarlogin')
     <div class="beranda">
         <h3 align="center" style="padding-top: 50px"><b>DAFTAR VOLUNTEER</b></h3>
-        <div class="container" style="padding-top: 60px; padding-left: 50px; padding-bottom: 60px">
+        <div class="container" style="padding-top: 60px; padding-bottom: 100px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
                     <form class="py-3" action="/DaftarVolunteer" method="post" enctype="multipart/form-data" >
