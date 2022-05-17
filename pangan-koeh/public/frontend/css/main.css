@@ -70,3 +70,8 @@
     font-size:small;
     width: 140px;
 }
+
+#card-pasar{
+    text-decoration: none;
+    color: inherit;
+}

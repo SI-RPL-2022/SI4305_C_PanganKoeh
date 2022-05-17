@@ -41,6 +41,9 @@ Route::get('/InputDataPangan', function () {
 });
 Route::get('/favorit', function () {
     return view('main.favorit');
+});    
+Route::get('/PasarTerdekat', function () {
+    return view('main.PasarTerdekat');
 });
 
 Route::post('/logout', [LoginController::class, 'logout']);

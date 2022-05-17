@@ -6,7 +6,8 @@
 
 @section('content')
     @include('layouts.navbarlogin')
-    <div class="container-fluid" style="padding-top: 100px" align="center">
+    <div class="beranda">
+    <div class="container-fluid py-auto" style="padding-top: 100px; padding-bottom: 400px" align="center">
             <div class="card p-3 mb-5 bg-body rounded" style="width: 60rem;">
                 <table class="table">
                 <tr align="center">
@@ -36,5 +37,6 @@
                     </tr>
                 </tbody>
             </div>
+    </div>
     </div>
 @endsection
