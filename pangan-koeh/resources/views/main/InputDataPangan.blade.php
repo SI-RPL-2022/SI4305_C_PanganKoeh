@@ -7,8 +7,9 @@
 @section('content')
     @include('layouts.navbarlogin')
 
+    <div class="beranda">
     <h3 align="center" style="padding-top: 50px"><b>INPUT DATA PANGAN</b></h3>
-    <div class="container" style="padding-top: 60px; padding-bottom: 40px" align="center">
+    <div class="container" style="padding-top: 60px; padding-bottom: 130px" align="center">
     <div class="card" style="width: 65rem;">
         <div class="card-body" style="padding-top: 10px;">
             <form action="" method="post" enctype="multipart/form-data" >
@@ -65,6 +66,7 @@
                 </div>
             </form>
         </div>
+    </div>
     </div>
     </div>
  @endsection
