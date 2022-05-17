@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UbahProfileController;
 use App\Http\Controllers\defController;
 use App\Http\Controllers\RegisterVolunteerController;
+use App\Http\Controllers\FavoritController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,9 @@ Route::get('/informasi', function () {
 });
 Route::get('/InputDataPangan', function () {
     return view('main.InputDataPangan');
+});
+Route::get('/favorit', function () {
+    return view('main.favorit');
 });
 
 Route::post('/logout', [LoginController::class, 'logout']);

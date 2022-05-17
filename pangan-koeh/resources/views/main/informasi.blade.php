@@ -1,7 +1,11 @@
 @extends('layouts.base')
 
+@section('title')
+    Pangankoeh
+@endsection
+
 @section('content')
-    @include('layouts.navbar')
+    @include('layouts.navbarlogin')
 
     <div class="beranda">
         <section>
