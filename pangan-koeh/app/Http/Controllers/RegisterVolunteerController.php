@@ -15,7 +15,7 @@ class RegisterVolunteerController extends Controller
      */
     public function index()
     {
-        //
+        return view('main.DaftarVolunteer');
     }
 
     /**
