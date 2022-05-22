@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApprovalController;
+use App\Http\Controllers\CobaChartController;
 use App\Http\Controllers\DataVolunteerController;
 use App\Http\Controllers\DaftarVolunteerController;
 use App\Http\Controllers\ProfileController;
@@ -30,9 +31,9 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 //     return view('auth.login');
 // });
 
-Route::get('/hargaPangan', function () {
-    return view('main.Dashboard');
-});
+// Route::get('/hargaPangan', function () {
+//     return view('main.Dashboard');
+// });
 Route::get('/informasi', function () {
     return view('main.informasi');
 });
@@ -41,7 +42,7 @@ Route::get('/InputDataPangan', function () {
 });
 Route::get('/favorit', function () {
     return view('main.favorit');
-});    
+});
 Route::get('/PasarTerdekat', function () {
     return view('main.PasarTerdekat');
 });
@@ -55,6 +56,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::middleware('admin')->group(function () {
     Route::get('/approval', [ApprovalController::class, 'index']);
     Route::get('/DataVolunteer', [DataVolunteerController::class, 'index']);
+    Route::get('/hargaPangan', [CobaChartController::class, 'linechart']);
 });
 
 Route::middleware('user')->group(function () {

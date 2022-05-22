@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div class="col-7 mx-2" id="display">
-                    <div class="py-4" id="grafik">
-                        <h1><b>Ini untuk grafik</b></h1>
+                    <div class="py-4" id="chart_div">
+                        
                         
                     </div>
                     <div id="daftarPangan">
