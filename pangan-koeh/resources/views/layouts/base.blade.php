@@ -14,35 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <!--Kebutuhan Charts-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {packages: ['corechart', 'line']});
-      google.charts.setOnLoadCallback(drawBasic);
-
-      function drawBasic() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('date', 'Date');
-      data.addColumn('number', 'Bawang');
-
-      data.addRows([
-        <?php echo $chartData;?>
-      ]);
-
-      var options = {
-        hAxis: {
-          title: 'Tanggal'
-        },
-        vAxis: {
-          title: 'Harga'
-        }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
-    </script>
+    @yield('kepalaJavaScript')
 
 
     <title>@yield('title')</title>

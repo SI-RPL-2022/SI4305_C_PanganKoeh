@@ -4,6 +4,38 @@
     Pangankoeh
 @endsection
 
+@section ("kepalaJavaScript")
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('date', 'Date');
+    data.addColumn('number', 'Bawang');
+
+    data.addRows([
+        <?php echo $chartData;?>
+    ]);
+
+    var options = {
+        hAxis: {
+        title: 'Tanggal'
+        },
+        vAxis: {
+        title: 'Harga'
+        }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+    }
+</script>
+@endsection
+
 @section('content')
     @if (Auth::user())
         @include('layouts.navbarlogin')
