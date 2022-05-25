@@ -34,8 +34,16 @@
                             <td><a href="{{ asset('storage/' . $volunteer->gambar) }}" target="blank">foto ktp</a></td>
                             <td align="center">
                             <div>
-                                <a href="#" class="btn btn-success">Terima</a>
-                                <a href="#" class="btn btn-danger">Tolak</a>
+                                <form class="col d-inline-block" action="/terima" method="POST">
+                                    @csrf
+                                    <input type="hidden" class="form-control" id="id" name="id" value="{{ $volunteer->user_id }}" readonly>
+                                    <button class="btn btn-success">Terima</button>
+                                </form>
+                                <form class="col d-inline-block" action="/tolak" method="POST">
+                                    @csrf
+                                    <input type="hidden" class="form-control" id="id" name="id" value="{{ $volunteer->user_id }}" readonly>
+                                    <button class="btn btn-danger">Tolak</button>
+                                </form>
                             </div>
                             </td>
                             

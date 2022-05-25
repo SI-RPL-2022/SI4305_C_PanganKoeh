@@ -57,6 +57,10 @@ Route::middleware('admin')->group(function () {
     Route::get('/approval', [ApprovalController::class, 'index']);
     Route::get('/DataVolunteer', [DataVolunteerController::class, 'index']);
     Route::get('/hargaPangan', [CobaChartController::class, 'linechart']);
+    Route::post('/terima', [ApprovalController::class, 'terima']);
+    Route::post('/tolak', [ApprovalController::class, 'tolak']);
+    Route::post('/active', [ApprovalController::class, 'active']);
+    Route::post('/inactive', [ApprovalController::class, 'inactive']);
 });
 
 Route::middleware('user')->group(function () {

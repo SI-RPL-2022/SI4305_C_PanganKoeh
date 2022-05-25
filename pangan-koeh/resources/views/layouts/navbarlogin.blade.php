@@ -16,9 +16,14 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Beranda</a>
-        </li>
+        @if (Auth::user()->fresh()->role == 'ADM')
+          <li class="nav-item">
+              <a class="nav-link" href="/DataVolunteer">Data Volunteer</a>
+          </li>
+        @endif
+          <li>
+              <a class="nav-link" href="/">Beranda</a>
+          </li>
         <li class="nav-item">
           <a class="nav-link" href="#cardAbout">Tentang Kami</a>
         </li>
