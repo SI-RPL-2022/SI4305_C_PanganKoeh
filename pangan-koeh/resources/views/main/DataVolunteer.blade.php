@@ -25,7 +25,7 @@
                 @endphp
                 <tbody>
                     @foreach ($data as $volunteer)
-                    @if ($volunteer->role == 'VLNTR' || $volunteer->role == 'USER')
+                    @if ($volunteer->role == 'VLNTR' || $volunteer->role == 'INACTIVE')
                         <tr>
                             <td>{{ ++$x }}</td>
                             <td>{{ $volunteer->name }}</td>
@@ -37,7 +37,7 @@
                                 @if ($volunteer->role == 'VLNTR')
                                     Active
                                 @endif
-                                @if ($volunteer->role == 'USER')
+                                @if ($volunteer->role == 'INACTIVE')
                                     Inactive
                                 @endif
                             </td>
@@ -46,16 +46,16 @@
                                     <form class="col d-inline-block" action="/inactive" method="POST">
                                         @csrf
                                         <input type="hidden" class="form-control" id="id" name="id" value="{{ $volunteer->user_id }}" readonly>
-                                        <button class="btn btn-danger">Inactive</button>
+                                        <button class="btn btn-danger">Inactived</button>
                                     </form>
                                 </td>
                             @endif
-                            @if ($volunteer->role == 'USER')
+                            @if ($volunteer->role == 'INACTIVE')
                                 <td>
                                     <form class="col d-inline-block" action="/active" method="POST">
                                         @csrf
                                         <input type="hidden" class="form-control" id="id" name="id" value="{{ $volunteer->user_id }}" readonly>
-                                        <button class="btn btn-success">Active</button>
+                                        <button class="btn btn-success">Actived</button>
                                     </form>
                                 </td>
                             @endif

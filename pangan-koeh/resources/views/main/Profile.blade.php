@@ -52,6 +52,38 @@
                             </div>
                         </div>
                     @endif
+                    @if (Auth::user()->fresh()->role == 'INACTIVE')
+                        <div class="col-12 col-md-6 p-5 mt-2">
+                            <h7><b style="color: rgb(165, 23, 23)">Mohon Maaf, Status Volunteer kamu sedang ditahan, harap menghubungi Admin untuk info lebih lanjut!</b></h7>
+                            <h5 style="font-weight: bold; font-size:15px">Username: <h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->name }}</p>
+                            <h5 style="font-weight: bold; font-size:15px">Email: <h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->email }}</p>
+                            <h5 style="font-weight: bold; font-size:15px">No.Telpon / HP<h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->no }}</p>
+                            <h5 style="font-weight: bold; font-size:15px">Alamat<h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->alamat }}</p>
+                            <div class="d-grid">
+                                <a href="/DaftarVolunteer/{{ Auth::user()->id }}/edit" type="button" class="btn" style="margin-top:10px; background-color: #3CD3A6; color: white">Ubah Profile</a>
+                            </div>
+                        </div>
+                    @endif
+                    @if (Auth::user()->fresh()->role == 'VLNTR')
+                        <div class="col-12 col-md-6 p-5 mt-2">
+                            <h5><b style="color: rgb(198, 198, 76)">Volunteer</b></h5>
+                            <h5 style="font-weight: bold; font-size:15px">Username: <h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->name }}</p>
+                            <h5 style="font-weight: bold; font-size:15px">Email: <h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->email }}</p>
+                            <h5 style="font-weight: bold; font-size:15px">No.Telpon / HP<h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->no }}</p>
+                            <h5 style="font-weight: bold; font-size:15px">Alamat<h5>
+                                <p style="font-size:15px; font-weight: normal">{{ Auth::user()->fresh()->alamat }}</p>
+                            <div class="d-grid">
+                                <a href="/DaftarVolunteer/{{ Auth::user()->id }}/edit" type="button" class="btn" style="margin-top:10px; background-color: #3CD3A6; color: white">Ubah Profile</a>
+                            </div>
+                        </div>
+                    @endif
                     
                 </form>
             </div>

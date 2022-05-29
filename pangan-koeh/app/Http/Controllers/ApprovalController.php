@@ -56,8 +56,8 @@ class ApprovalController extends Controller
     {
         $data = User::find($request->id);
         $datav = Volunteer::where('user_id', $request->id)->get();
-        $data->role = 'USER';
-        $datav[0]->role = 'USER';
+        $data->role = 'INACTIVE';
+        $datav[0]->role = 'INACTIVE';
         $data->save();
         $datav[0]->save();
 
