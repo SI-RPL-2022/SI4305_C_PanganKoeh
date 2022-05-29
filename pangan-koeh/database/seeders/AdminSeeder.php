@@ -941,6 +941,7 @@ class AdminSeeder extends Seeder
                 ]
                 ]);
 
+<<<<<<< HEAD
             \App\Models\Price::insert([
                 [
                     'id_pasar' => '2',
@@ -1941,5 +1942,17 @@ class AdminSeeder extends Seeder
                     'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
                 ]
             ]);
+=======
+                \App\Models\Price::insert([
+                    [
+                        'id_pasar' => '2',
+                        'id_komoditas' => '9',
+                        'harga' => '24500',
+                        'tanggal' => '2022-04-06',
+                        'kontributor' => 'Muthi',
+                        'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+                    ]
+                    ]);
+>>>>>>> 0b03adc782d41cdfc168559f82eb5fad69f49877
 }
 }
