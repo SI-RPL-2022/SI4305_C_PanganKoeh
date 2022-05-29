@@ -258,17 +258,6 @@ class AdminSeeder extends Seeder
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
             ]);
-                    
-        \App\Models\Price::insert([
-            [
-                'id_pasar' => '1',
-                'id_komoditas' => '4',
-                'harga' => '57500',
-                'tanggal' => '2022-04-05',
-                'kontributor' => 'Muthi',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-            ]);
             
         \App\Models\Price::insert([
             [
@@ -331,17 +320,6 @@ class AdminSeeder extends Seeder
                 'id_komoditas' => '4',
                 'harga' => '47500',
                 'tanggal' => '2022-04-13',
-                'kontributor' => 'Muthi',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-            ]);
-    
-        \App\Models\Price::insert([
-            [
-                'id_pasar' => '1',
-                'id_komoditas' => '4',
-                'harga' => '47500',
-                'tanggal' => '2022-04-14',
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
@@ -1449,6 +1427,248 @@ class AdminSeeder extends Seeder
 
         \App\Models\Price::insert([
             [
+                'id_pasar' => '1',
+                'id_komoditas' => '1',
+                'harga' => '41500',
+                'tanggal' => '2022-04-08',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '1',
+                'harga' => '40000',
+                'tanggal' => '2022-04-11',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '1',
+                'harga' => '40000',
+                'tanggal' => '2022-04-12',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '1',
+                'harga' => '40000',
+                'tanggal' => '2022-04-13',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '1',
+                'harga' => '40000',
+                'tanggal' => '2022-04-14',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-01',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-04',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-05',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-06',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-07',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-08',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-11',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-12',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-13',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '2',
+                'harga' => '33500',
+                'tanggal' => '2022-04-14',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '65000',
+                'tanggal' => '2022-04-01',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '70000',
+                'tanggal' => '2022-04-04',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '70000',
+                'tanggal' => '2022-04-05',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '70000',
+                'tanggal' => '2022-04-06',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '70000',
+                'tanggal' => '2022-04-07',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '70000',
+                'tanggal' => '2022-04-08',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '1',
+                'id_komoditas' => '3',
+                'harga' => '62500',
+                'tanggal' => '2022-04-11',
+                'kontributor' => 'Cindy',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
                 'id_pasar' => '2',
                 'id_komoditas' => '9',
                 'harga' => '24500',
@@ -1937,6 +2157,237 @@ class AdminSeeder extends Seeder
                 'id_komoditas' => '4',
                 'harga' => '62500',
                 'tanggal' => '2022-04-13',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '4',
+                'harga' => '57500',
+                'tanggal' => '2022-04-14',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '24000',
+                'tanggal' => '2022-04-01',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '25850',
+                'tanggal' => '2022-04-04',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '25850',
+                'tanggal' => '2022-04-05',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '25000',
+                'tanggal' => '2022-04-06',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '25000',
+                'tanggal' => '2022-04-07',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '25000',
+                'tanggal' => '2022-04-08',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '24850',
+                'tanggal' => '2022-04-11',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '24850',
+                'tanggal' => '2022-04-12',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '24850',
+                'tanggal' => '2022-04-13',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '8',
+                'harga' => '24850',
+                'tanggal' => '2022-04-14',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '13750',
+                'tanggal' => '2022-04-01',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '13750',
+                'tanggal' => '2022-04-04',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '13750',
+                'tanggal' => '2022-04-05',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '13750',
+                'tanggal' => '2022-04-06',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '13750',
+                'tanggal' => '2022-04-07',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '14750',
+                'tanggal' => '2022-04-08',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '14750',
+                'tanggal' => '2022-04-11',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '14250',
+                'tanggal' => '2022-04-12',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '14250',
+                'tanggal' => '2022-04-13',
+                'kontributor' => 'Reditta',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
+                'id_pasar' => '2',
+                'id_komoditas' => '7',
+                'harga' => '14250',
+                'tanggal' => '2022-04-14',
                 'kontributor' => 'Reditta',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
