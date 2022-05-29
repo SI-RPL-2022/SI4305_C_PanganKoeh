@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UbahProfileController;
 use App\Http\Controllers\defController;
 use App\Http\Controllers\RegisterVolunteerController;
+use App\Http\Controllers\InputPanganController;
 use App\Http\Controllers\FavoritController;
 
 /*
@@ -37,9 +38,9 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 Route::get('/informasi', function () {
     return view('main.informasi');
 });
-Route::get('/InputDataPangan', function () {
-    return view('main.InputDataPangan');
-});
+// Route::get('/InputDataPangan', function () {
+//     return view('main.InputDataPangan');
+// });
 Route::get('/favorit', function () {
     return view('main.favorit');
 });
@@ -70,6 +71,7 @@ Route::middleware('user')->group(function () {
     Route::get('/UbahProfile', [UbahProfileController::class, 'index']);
     Route::get('/Profile', [ProfileController::class, 'index']);
     Route::resource('/DaftarVolunteer', RegisterVolunteerController::class);
+    Route::resource('/InputDataPangan', InputPanganController::class);
 });
 
-Route::post('/InputDataPangan', [InputDataPanganController::class, 'store']);
+// Route::post('/InputDataPangan', [InputDataPanganController::class, 'store']);

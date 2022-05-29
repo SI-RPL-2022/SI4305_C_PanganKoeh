@@ -70,7 +70,7 @@
           @if (Auth::user()->fresh()->role == 'ADM')
             <li><a class="dropdown-item" href="/approval">Approval</a></li>
           @elseif (Auth::user()->fresh()->role == 'VLNTR')
-            <li><a class="dropdown-item" href="/InputDataPangan">Input Data Pangan</a></li>
+            <li><a class="dropdown-item" href="/InputDataPangan/create">Input Data Pangan</a></li>
           @endif
           <li><hr class="dropdown-divider"></li>
           <li>

@@ -36,5 +36,21 @@ class AdminSeeder extends Seeder
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
+        \App\Models\Market::insert([
+            [
+                'name' => 'Pasar Dayeuhkolot',
+                'kecamatan' => 'Dayeuhkolot',
+                'alamat' => 'Jl. Raya Dayeuhkolot No.330, Dayeuhkolot, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40258',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Market::insert([
+            [
+                'name' => 'Pasar Baleendah',
+                'kecamatan' => 'Baleendah',
+                'alamat' => 'Jl. Siliwangi, Baleendah, Kec. Baleendah, Kabupaten Bandung, Jawa Barat 40375',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
     }
 }

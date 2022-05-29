@@ -12,17 +12,16 @@
     <div class="container" style="padding-top: 60px; padding-bottom: 130px" align="center">
     <div class="card" style="width: 65rem;">
         <div class="card-body" style="padding-top: 10px;">
-            <form action="" method="post" enctype="multipart/form-data" >
+            <form action="/InputDataPangan" method="post" enctype="multipart/form-data" >
+                @csrf
                 <div class="row mb-3">
                     <label for="namapasar" class="col-sm-2 col-form-label">Nama Pasar</label>
                     <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Pilih nama pangan</option>
-                            <option value="1">Pasar 1</option>
-                            <option value="2">Pasar 2</option>
-                            <option value="3">Pasar 3</option>
-                            <option value="4">Pasar 4</option>
-                            <option value="5">Pasar 5</option>
+                            @foreach ($pasar as $opt)
+                            <option value="{{ $opt->id }}">{{ $opt->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
