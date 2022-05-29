@@ -2161,7 +2161,6 @@ class AdminSeeder extends Seeder
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-<<<<<<< HEAD
 
         \App\Models\Price::insert([
             [
@@ -2393,19 +2392,5 @@ class AdminSeeder extends Seeder
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-}
-}
-=======
-        \App\Models\Price::insert([
-            [
-                'id_pasar' => '1',
-                'id_komoditas' => '3',
-                'harga' => '70000',
-                'tanggal' => '2022-04-08',
-                'kontributor' => 'Cindy',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
     }
 }
->>>>>>> d3186784655ff383236c7585d32480dbadc87f55
