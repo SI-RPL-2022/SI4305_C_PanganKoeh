@@ -1449,6 +1449,7 @@ class AdminSeeder extends Seeder
 
         \App\Models\Price::insert([
             [
+<<<<<<< HEAD
                 'id_pasar' => '2',
                 'id_komoditas' => '9',
                 'harga' => '24500',
@@ -1943,6 +1944,8 @@ class AdminSeeder extends Seeder
         ]);
         \App\Models\Price::insert([
             [
+=======
+>>>>>>> parent of e868d9a (database daftar pangankoeh)
                 'id_pasar' => '1',
                 'id_komoditas' => '3',
                 'harga' => '70000',
