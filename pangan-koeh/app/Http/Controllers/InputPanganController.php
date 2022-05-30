@@ -47,9 +47,10 @@ class InputPanganController extends Controller
             'namapangan' => 'required|max:255',
             'harga' => 'required|max:255',
             'tanggal' => 'required|max:255',
-            // 'gambarpasar' => 'image|file|max:3072'
+            'gambarpasar' => 'image|file|max:3072'
         ]);
-        // $validatedData['gambarpasar'] = $request->file('gambar')->store('post-images');
+
+        $validatedData['gambarpasar'] = $request->file('gambarpasar')->store('post-images');
         $validatedData['id_komoditas'] = $validatedData['namapangan'];
         $validatedData['kontributor'] = auth()->user()->name;
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Volunteer;
 use App\Models\User;
+use App\Models\Market;
 use Illuminate\Http\Request;
 
 class RegisterVolunteerController extends Controller
@@ -15,7 +16,9 @@ class RegisterVolunteerController extends Controller
      */
     public function index()
     {
-        return view('main.DaftarVolunteer');
+        return view('main.DaftarVolunteer', [
+            'pasar' => Market::all(),
+        ]);
     }
 
     /**
@@ -25,7 +28,9 @@ class RegisterVolunteerController extends Controller
      */
     public function create()
     {
-        return view('main.DaftarVolunteer');
+        return view('main.DaftarVolunteer', [
+            'pasar' => Market::all(),
+        ]);
     }
 
     /**
@@ -47,6 +52,7 @@ class RegisterVolunteerController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['gambar'] = $request->file('gambar')->store('post-images');
+        return ($validatedData);
 
         // if ($validatedData['name'] != auth()->user()->name) {
         //     return redirect()->intended('Profile');

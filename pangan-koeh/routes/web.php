@@ -8,6 +8,7 @@ use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\CobaChartController;
 use App\Http\Controllers\DataVolunteerController;
 use App\Http\Controllers\DaftarVolunteerController;
+use App\Http\Controllers\DetailPasarController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UbahProfileController;
 use App\Http\Controllers\defController;
@@ -58,7 +59,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::middleware('admin')->group(function () {
     Route::get('/approval', [ApprovalController::class, 'index']);
     Route::get('/DataVolunteer', [DataVolunteerController::class, 'index']);
-    Route::get('/hargaPangan', [CobaChartController::class, 'linechart']);
+    Route::get('/hargaPangan/{id}', [CobaChartController::class, 'linechart']);
+    Route::get('/DetailPasar/{id}', [DetailPasarController::class, 'index']);
     Route::post('/terima', [ApprovalController::class, 'terima']);
     Route::post('/tolak', [ApprovalController::class, 'tolak']);
     Route::post('/active', [ApprovalController::class, 'active']);

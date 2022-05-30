@@ -35,8 +35,8 @@
             Pasar
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/hargaPangan">Pasar A</a></li>
-            <li><a class="dropdown-item" href="/hargaPangan">Pasar B</a></li>
+              <li><a class="dropdown-item" href="/DetailPasar/1">Pasar Kosambi</a></li>
+              <li><a class="dropdown-item" href="/DetailPasar/2">Pasar Kiaracondong</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/PasarTerdekat">Pasar Terdekat</a></li>
           </ul>
