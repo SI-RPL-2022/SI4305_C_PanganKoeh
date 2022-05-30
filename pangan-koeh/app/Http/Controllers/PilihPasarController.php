@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Market;
 use App\Models\Pangan;
-use App\Models\Price;
 
-
-class InputPanganController extends Controller
+class PilihPasarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +15,7 @@ class InputPanganController extends Controller
      */
     public function index()
     {
-        return view('main.InputDataPangan');
+        return view('main.PilihPasar');
     }
 
     /**
@@ -27,9 +25,8 @@ class InputPanganController extends Controller
      */
     public function create()
     {
-        return view('main.InputDataPangan', [
+        return view('main.PilihPasar', [
             'pasar' => Market::all(),
-            'pangan' => Pangan::all()
         ]);
     }
 
@@ -41,22 +38,12 @@ class InputPanganController extends Controller
      */
     public function store(Request $request)
     {
-
-        $validatedData = $request->validate([
-            'id_pasar' => 'required|max:255',
-            'namapangan' => 'required|max:255',
-            'harga' => 'required|max:255',
-            'tanggal' => 'required|max:255',
-            // 'gambarpasar' => 'image|file|max:3072'
+        // $data = Pangan::where('id_pasar', $request->namapasar)->get();
+        // dd($data);
+        return view('main.InputDataPangan', [
+            'pangan' => Pangan::where('id_pasar', $request->namapasar)->get(),
+            'id' => $request->namapasar
         ]);
-        // $validatedData['gambarpasar'] = $request->file('gambar')->store('post-images');
-        $validatedData['id_komoditas'] = $validatedData['namapangan'];
-        $validatedData['kontributor'] = auth()->user()->name;
-
-        // return $validatedData;
-        Price::create($validatedData);
-        $request->session()->flash('success', 'Data Harga Pangan Berhasil Diinput!');
-        return redirect('/');
     }
 
     /**

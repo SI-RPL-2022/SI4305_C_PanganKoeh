@@ -14,43 +14,15 @@
         <div class="card-body" style="padding-top: 10px;">
             <form action="/InputDataPangan" method="post" enctype="multipart/form-data" >
                 @csrf
-                <div class="row mb-3">
-                    <label for="namapasar" class="col-sm-2 col-form-label">Nama Pasar</label>
-                    <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Pilih nama pangan</option>
-                            @foreach ($pasar as $opt)
-                            <option value="{{ $opt->id }}">{{ $opt->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
+                <input type="hidden" name="id_pasar" id="id_pasar" value="{{ $id }}">
                 <div class="row mb-3">
                     <label for="namapangan" class="col-sm-2 col-form-label">Nama Pangan</label>
                     <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" name="namapangan">
                             <option selected>Pilih nama pangan</option>
-                            <option value="1">Bawang Merah</option>
-                            <option value="2">Bawang Putih</option>
-                            <option value="3">Cabai Merah</option>
-                            <option value="4">Cabai Rawit</option>
-                            <option value="5">Daging Ayam</option>
-                            <option value="6">Daging Sapi</option>
-                            <option value="7">Gula Pasir</option>
-                            <option value="8">Minyak Goreng</option>
-                            <option value="9">Telur Ayam</option>
-                            <option value="10">Beras</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="berat" class="col-sm-2 col-form-label">Satuan Berat</label>
-                    <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>pilih satuan berat</option>
-                            <option value="1">/kg</option>
-                            <option value="2">/g</option>
-                            <option value="3">/ons</option>
+                            @foreach ($pangan as $opt)
+                            <option value="{{ $opt->id }}">{{ $opt->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -59,6 +31,7 @@
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="harga" name="harga" placeholder="Masukkan harga pangan">
                     </div>
+                    <p>harga yang diinput dalam bentuk per kg, minyak dalam liter</p>
                 </div>
                 <div class="row mb-3">
                     <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>

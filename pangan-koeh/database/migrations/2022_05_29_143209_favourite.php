@@ -24,10 +24,6 @@ return new class extends Migration
             $table->foreignId('id_komoditas');
             $table->index('id_komoditas');
             $table->foreign('id_komoditas')->references('id')->on('pangans')->onDelete('cascade');
-            $table->string('name');
-            $table->string('harga');
-            $table->string('tanggal');
-            $table->string('kontributor');
             $table->rememberToken();
             $table->timestamps();
         });

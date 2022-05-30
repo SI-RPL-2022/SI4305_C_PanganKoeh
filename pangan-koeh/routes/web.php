@@ -13,6 +13,7 @@ use App\Http\Controllers\UbahProfileController;
 use App\Http\Controllers\defController;
 use App\Http\Controllers\RegisterVolunteerController;
 use App\Http\Controllers\InputPanganController;
+use App\Http\Controllers\PilihPasarController;
 use App\Http\Controllers\FavoritController;
 
 /*
@@ -72,6 +73,7 @@ Route::middleware('user')->group(function () {
     Route::get('/Profile', [ProfileController::class, 'index']);
     Route::resource('/DaftarVolunteer', RegisterVolunteerController::class);
     Route::resource('/InputDataPangan', InputPanganController::class);
+    Route::resource('/PilihPasar', PilihPasarController::class);
 });
 
 // Route::post('/InputDataPangan', [InputDataPanganController::class, 'store']);

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('prices', function (Blueprint $table) {
+        Schema::create('ngansars', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_pasar');
             $table->index('id_pasar');
@@ -21,9 +21,7 @@ return new class extends Migration
             $table->foreignId('id_komoditas');
             $table->index('id_komoditas');
             $table->foreign('id_komoditas')->references('id')->on('pangans')->onDelete('cascade');
-            $table->string('harga');
-            $table->string('tanggal');
-            $table->string('kontributor');
+            $table->string('name');
             $table->rememberToken();
             $table->timestamps();
         });

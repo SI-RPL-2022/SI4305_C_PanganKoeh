@@ -38,17 +38,157 @@ class AdminSeeder extends Seeder
         ]);
         \App\Models\Market::insert([
             [
-                'name' => 'Pasar Dayeuhkolot',
-                'kecamatan' => 'Dayeuhkolot',
-                'alamat' => 'Jl. Raya Dayeuhkolot No.330, Dayeuhkolot, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40258',
+                'name' => 'Pasar Kosambi',
+                'kecamatan' => 'Sumur Bandung',
+                'alamat' => 'Jl. A. Yani No.221-223, Kb. Pisang, Kota Bandung, Jawa Barat 40112',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
         \App\Models\Market::insert([
             [
-                'name' => 'Pasar Baleendah',
-                'kecamatan' => 'Baleendah',
-                'alamat' => 'Jl. Siliwangi, Baleendah, Kec. Baleendah, Kabupaten Bandung, Jawa Barat 40375',
+                'name' => 'Pasar Kiaracondong',
+                'kecamatan' => 'Kiaracondong',
+                'alamat' => 'Jl. Jend. Ibrahim Adjie, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Bawang Merah',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Bawang Merah',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Bawang Putih',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Bawang Putih',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Cabai Merah',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Cabai Merah',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Cabai Rawit',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Cabai Rawit',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Daging Ayam',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Daging Ayam',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Daging Sapi',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Daging Sapi',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Gula Pasir',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Gula Pasir',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Minyak Goreng',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Minyak Goreng',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Telur Ayam',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Telur Ayam',
+                'id_pasar' => '2',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Beras',
+                'id_pasar' => '1',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+        \App\Models\Pangan::insert([
+            [
+                'name' => 'Beras',
+                'id_pasar' => '2',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
