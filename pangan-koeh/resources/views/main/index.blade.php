@@ -141,14 +141,6 @@
                       <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
                     </div>
                   </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
-                    <img src="frontend\gambar\Pangan\18.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Bayam /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 13.800,-</a>
-                    </div>
-                  </div>
                 </div>
               </div>
 
