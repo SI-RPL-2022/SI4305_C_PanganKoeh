@@ -91,13 +91,20 @@
                     </div>
                 </div>
                 <div class="col-7 mx-2" id="display">
+                    <div class="py-4">
+                        <a href="/DetailPasar/{{ $pasar->id }}" type="button" class="btn btn-primary rounded-pill py-2">Detail Pasar</a>
+                    </div>
+                    
                     <div class="py-4" id="top_x_div">
                         
                         
                     </div>
                     <div id="daftarPangan">
+                        
                         <div class="container">
+                            
                             <div class="row row-cols-4">
+                                
                                 @foreach ($pangan as $item)
                                     <div class="col pb-4">
                                         <a href="/hargaPangan1/{{ $item->id }}/{{ $pasar->id }}" type="button" class="btn btn-success rounded-pill py-2">{{ $item->name }}</a>

@@ -27,6 +27,7 @@ class CobaChartController extends Controller
     }
     public function linechart($id_pangan, $id_pasar)
     {
+        $tes = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE tanggal = (SELECT MAX(tanggal) FROM `prices`) AND id_pasar = $id_pasar AND id_komoditas= $id_pangan group by id_komoditas"));
         $result = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE id_komoditas = $id_pangan AND id_pasar= $id_pasar group by tanggal ORDER BY `prices`.`tanggal` ASC"));
         $data = "";
         foreach ($result as $val) {
@@ -38,7 +39,8 @@ class CobaChartController extends Controller
             'pasar' => Market::find($id_pasar),
             'pangan' => Pangan::all(),
             'panganspes' => Pangan::find($id_pangan),
-            'grafik' => $chartData
+            'grafik' => $chartData,
+            'tes' => $tes
         ]);
     }
 }

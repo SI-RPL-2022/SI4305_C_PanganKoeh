@@ -50,14 +50,12 @@
                         </div>
                     </div>
                     <div class="col-7 mx-2" id="display">
-                        <div class="py-4" id="chart_div">
-                            
-                            
+                        <div class="py-2">
+                            <a href="/hargaPangan/{{ $pasar->id }}" type="button" class="btn btn-primary rounded-pill py-2">Grafik</a>
                         </div>
                         <div id="daftarPangan">
                             <div class="container">
                                 <div class="row row-cols-4">
-                                    <a href="/hargaPangan/{{ $pasar->id }}" type="button" class="badge bg-success border-0">Grafik</a>
                                     <table class="table">
                                         <tr align="center">
                                             <th scope="col" style="color: white">No</th>

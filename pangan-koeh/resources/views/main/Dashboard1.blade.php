@@ -81,12 +81,17 @@ Pangankoeh
                 </div>
             </div>
             <div class="col-7 mx-2" id="display">
+                <div class="py-4">
+                        <a href="/hargaPangan/{{ $pasar->id }}" type="button" class="btn btn-primary rounded-pill py-2">Grafik Utama</a>
+                    </div>
                 <div class="py-4" id="chart_div">
 
 
                 </div>
                 <div id="daftarPangan">
                     <div class="container">
+                        <h2>Harga {{ $panganspes->name }} Hari Ini</h2>
+                        <h3>Rp{{ $tes[0]->harga }}</h3>
                         <div class="row row-cols-4">
                             @foreach ($pangan as $item)
                             <div class="col pb-4">
