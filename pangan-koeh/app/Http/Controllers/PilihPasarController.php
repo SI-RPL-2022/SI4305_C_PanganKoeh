@@ -41,7 +41,7 @@ class PilihPasarController extends Controller
         // $data = Pangan::where('id_pasar', $request->namapasar)->get();
         // dd($data);
         return view('main.InputDataPangan', [
-            'pangan' => Pangan::where('id_pasar', $request->namapasar)->get(),
+            'pangan' => Pangan::all(),
             'id' => $request->namapasar
         ]);
     }

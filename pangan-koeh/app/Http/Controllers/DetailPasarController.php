@@ -12,7 +12,7 @@ class DetailPasarController extends Controller
 {
     public function index($id)
     {
-        $result = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE tanggal = (SELECT MAX(tanggal) FROM `prices`) AND id_pasar = $id group by id_komoditas"));
+        $result = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE id_pasar = $id group by id_komoditas"));
         // $data = "";
         // foreach ($result as $val) {
         //     $data = $val;

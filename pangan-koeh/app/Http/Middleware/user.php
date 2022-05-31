@@ -18,7 +18,7 @@ class user
     public function handle($request, Closure $next)
     {
 
-        if (!auth()->check() || !auth()->user()->role = 'USER') {
+        if (!auth()->check() || !auth()->user()->role = 'USER' || !auth()->user()->role = 'VLNTR') {
             Auth::logout();
 
             $request->session()->invalidate();

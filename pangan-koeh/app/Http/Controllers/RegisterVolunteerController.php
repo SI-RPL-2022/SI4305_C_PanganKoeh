@@ -52,7 +52,7 @@ class RegisterVolunteerController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['gambar'] = $request->file('gambar')->store('post-images');
-        return ($validatedData);
+        // return ($validatedData);
 
         // if ($validatedData['name'] != auth()->user()->name) {
         //     return redirect()->intended('Profile');
