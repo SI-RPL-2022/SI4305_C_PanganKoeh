@@ -5,34 +5,45 @@
 @endsection
 
 @section ("kepalaJavaScript")
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-    google.charts.load('current', {packages: ['corechart', 'line']});
-    google.charts.setOnLoadCallback(drawBasic);
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawStuff);
 
-    function drawBasic() {
+    function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+        ['Komoditas', 'Harga'],
+        ['{{ $pangan[$grafik[0]->id_komoditas-1]->name }}', {{ $grafik[0]->harga }}],
+        ['{{ $pangan[$grafik[1]->id_komoditas-1]->name }}', {{ $grafik[1]->harga }}],
+        ['{{ $pangan[$grafik[2]->id_komoditas-1]->name }}', {{ $grafik[2]->harga }}],
+        ['{{ $pangan[$grafik[3]->id_komoditas-1]->name }}', {{ $grafik[3]->harga }}],
+        ['{{ $pangan[$grafik[4]->id_komoditas-1]->name }}', {{ $grafik[4]->harga }}],
+        ['{{ $pangan[$grafik[5]->id_komoditas-1]->name }}', {{ $grafik[5]->harga }}],
+        ['{{ $pangan[$grafik[6]->id_komoditas-1]->name }}', {{ $grafik[6]->harga }}],
+        ['{{ $pangan[$grafik[7]->id_komoditas-1]->name }}', {{ $grafik[7]->harga }}],
+        ['{{ $pangan[$grafik[8]->id_komoditas-1]->name }}', {{ $grafik[8]->harga }}],
+        ['{{ $pangan[$grafik[9]->id_komoditas-1]->name }}', {{ $grafik[9]->harga }}]
+        ]);
 
-    var data = new google.visualization.DataTable();
-    data.addColumn('date', 'Date');
-    data.addColumn('number', 'Bawang');
-
-    data.addRows([
-        <?php echo $chartData;?>
-    ]);
-
-    var options = {
-        hAxis: {
-        title: 'Tanggal'
+        var options = {
+        title: 'Chess opening moves',
+        width: 725,
+        height: 500,
+        legend: { position: 'none' },
+        chart: { title: 'Harga Pangan di {{ $pasar->name }}',
+                subtitle: 'Harga berdasarkan rupiah' },
+        bars: 'vertical', // Required for Material Bar Charts.
+        axes: {
+            y: {
+            0   : { side: 'left', label: 'Harga'} // Top x-axis.
+            }
         },
-        vAxis: {
-        title: 'Harga'
-        }
+        bar: { groupWidth: "90%" }
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
+    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
     chart.draw(data, options);
-    }
+    };
 </script>
 @endsection
 
@@ -42,18 +53,21 @@
     @else
         @include('layouts.navbar')
     @endif
-
+    
+    {{-- @php
+        dd($grafik);
+    @endphp --}}
     <div class="beranda">
         <div class="container" style="padding-top: 80px; padding-bottom: 80px">
             <div class="row justify-content-around">
                 <div class="col-4" id="display">
                     <div class="mx-2 py-4" id="infoPasar">
                         <div class="NamaPasar">
-                            <h3><b>Pasar Kiaracondong</b></h3>
+                            <h3><b>{{ $pasar->name }}</b></h3>
                         </div>
                         <div class="mt-3 AlamatPasar">
                             <h6>
-                                Ps. Kiaracondong, Kebun Jayanti, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281
+                                {{ $pasar->alamat }}
                             </h6>
                         </div>
                         <div class="mt-4">
@@ -77,40 +91,18 @@
                     </div>
                 </div>
                 <div class="col-7 mx-2" id="display">
-                    <div class="py-4" id="chart_div">
+                    <div class="py-4" id="top_x_div">
                         
                         
                     </div>
                     <div id="daftarPangan">
                         <div class="container">
                             <div class="row row-cols-4">
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Bawang Merah</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Bawang Putih</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Cabai Merah</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Cabai Rawit</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Daging Ayam</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Daging Sapi</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Gula Pasir</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Minyak Goreng</button>
-                                </div>
-                                <div class="col pb-4">
-                                    <button type="button" id="buttonPangan" class="btn btn-success rounded-pill py-2">Telur Ayam</button>
-                                </div>
+                                @foreach ($pangan as $item)
+                                    <div class="col pb-4">
+                                        <a href="/hargaPangan1/{{ $item->id }}/{{ $pasar->id }}" type="button" class="btn btn-success rounded-pill py-2">{{ $item->name }}</a>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

@@ -59,7 +59,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::middleware('admin')->group(function () {
     Route::get('/approval', [ApprovalController::class, 'index']);
     Route::get('/DataVolunteer', [DataVolunteerController::class, 'index']);
-    Route::get('/hargaPangan/{id}', [CobaChartController::class, 'linechart']);
+    Route::get('/hargaPangan/{id}', [CobaChartController::class, 'barchart']);
+    Route::get('/hargaPangan1/{id_pangan}/{id_pasar}', [CobaChartController::class, 'linechart']);
+    // Route::get('/hargaPangan1', [CobaController::class, 'linechart']);
     Route::get('/DetailPasar/{id}', [DetailPasarController::class, 'index']);
     Route::post('/terima', [ApprovalController::class, 'terima']);
     Route::post('/tolak', [ApprovalController::class, 'tolak']);

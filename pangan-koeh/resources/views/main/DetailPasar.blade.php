@@ -57,6 +57,7 @@
                         <div id="daftarPangan">
                             <div class="container">
                                 <div class="row row-cols-4">
+                                    <a href="/hargaPangan/{{ $pasar->id }}" type="button" class="badge bg-success border-0">Grafik</a>
                                     <table class="table">
                                         <tr align="center">
                                             <th scope="col" style="color: white">No</th>
