@@ -14,7 +14,7 @@
         @include('layouts.navbar')
     @endif
 {{-- @php
-    dd($result);
+    dd($pangan[0]);
 @endphp --}}
         <div class="beranda">
             <div class="container" style="padding-top: 80px; padding-bottom: 80px">
@@ -22,11 +22,11 @@
                     <div class="col-4" id="display">
                         <div class="mx-2 py-4" id="infoPasar">
                             <div class="NamaPasar">
-                                <h3><b>{{ $result[1]->namapasar }}</b></h3>
+                                <h3><b>{{ $pasar->name }}</b></h3>
                             </div>
                             <div class="mt-3 AlamatPasar">
                                 <h6>
-                                    {{ $result[1]->alamat }}
+                                    {{ $pasar->alamat }}
                                 </h6>
                             </div>
                             <div class="mt-4">
@@ -71,7 +71,7 @@
                                             @foreach ($result as $item)
                                                 <tr>
                                                     <td style="color: white">{{ ++$x }}</td>
-                                                    <td style="color: white">{{ $item->namapangan }}</td>
+                                                    <td style="color: white">{{ $pangan[$item->id_komoditas-1]->name }}</td>
                                                     <td style="color: white">{{ $item->harga }}</td>
                                                     <td style="color: white">{{ $item->tanggal }}</td>
                                                 </tr>

@@ -12,7 +12,7 @@ class DetailPasarController extends Controller
 {
     public function index($id)
     {
-        $result = DB::select(DB::raw("SELECT markets.name AS namapasar,pangans.name AS namapangan,prices.harga,prices.tanggal,markets.alamat FROM markets LEFT JOIN pangans ON markets.id = pangans.id_pasar LEFT JOIN prices ON markets.id = prices.id_pasar WHERE tanggal = (SELECT MAX(tanggal) FROM `prices` WHERE id_pasar = $id) group BY pangans.name"));
+        $result = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE tanggal = (SELECT MAX(tanggal) FROM `prices`) AND id_pasar = $id group by id_komoditas"));
         // $data = "";
         // foreach ($result as $val) {
         //     $data = $val;
@@ -20,7 +20,9 @@ class DetailPasarController extends Controller
         // $test = ;
         // dd(compact($result));
         return view('main.DetailPasar', [
-            'result' => $result
+            'result' => $result,
+            'pasar' => Market::find($id),
+            'pangan' => Pangan::all()
         ]);
     }
 }

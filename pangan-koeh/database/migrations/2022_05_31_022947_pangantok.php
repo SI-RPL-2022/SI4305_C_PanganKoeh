@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pangans', function (Blueprint $table) {
+        Schema::create('pangantoks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->rememberToken();

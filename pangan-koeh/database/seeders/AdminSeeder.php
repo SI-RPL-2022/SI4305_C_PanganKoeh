@@ -55,140 +55,69 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Bawang Merah',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Bawang Merah',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Bawang Putih',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Bawang Putih',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Cabai Merah',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Cabai Merah',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Cabai Rawit',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Cabai Rawit',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Daging Ayam',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Daging Ayam',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Daging Sapi',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Daging Sapi',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Gula Pasir',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Gula Pasir',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Minyak Goreng',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Minyak Goreng',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Telur Ayam',
-                'id_pasar' => '1',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Telur Ayam',
-                'id_pasar' => '2',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
+
         \App\Models\Pangan::insert([
             [
                 'name' => 'Beras',
-                'id_pasar' => '1',
-                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
-            ]
-        ]);
-        \App\Models\Pangan::insert([
-            [
-                'name' => 'Beras',
-                'id_pasar' => '2',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -202,7 +131,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -213,7 +142,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -224,8 +153,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-        
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -235,8 +164,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-        
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -246,8 +175,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);  
-        
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -257,8 +186,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-            
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -268,7 +197,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -279,7 +208,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -290,8 +219,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-    
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -301,7 +230,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -312,7 +241,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -323,8 +252,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-    
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -334,7 +263,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -345,7 +274,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -356,8 +285,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-        
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -367,7 +296,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -378,8 +307,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-    
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -389,7 +318,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -400,8 +329,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
-    
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '1',
@@ -411,7 +340,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -422,7 +351,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -433,7 +362,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -444,7 +373,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -455,7 +384,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -466,7 +395,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -477,7 +406,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -488,7 +417,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -499,7 +428,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -510,7 +439,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -521,7 +450,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -532,7 +461,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -543,7 +472,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -554,7 +483,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -565,7 +494,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -576,7 +505,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -587,7 +516,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -598,8 +527,8 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);   
-            
+        ]);
+
         \App\Models\Price::insert([
             [
                 'id_pasar' => '2',
@@ -609,7 +538,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -620,7 +549,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -631,7 +560,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -642,7 +571,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -653,7 +582,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -664,7 +593,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -675,7 +604,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -686,7 +615,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -697,7 +626,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -708,7 +637,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -719,7 +648,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -730,7 +659,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -741,7 +670,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -752,7 +681,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -763,7 +692,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -774,7 +703,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -785,7 +714,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -796,7 +725,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -807,7 +736,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -818,7 +747,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -829,7 +758,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -840,7 +769,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -851,7 +780,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -862,7 +791,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -873,7 +802,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -884,7 +813,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -895,7 +824,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -906,7 +835,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -917,7 +846,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
@@ -928,7 +857,7 @@ class AdminSeeder extends Seeder
                 'kontributor' => 'Muthi',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
-            ]);
+        ]);
 
         \App\Models\Price::insert([
             [
