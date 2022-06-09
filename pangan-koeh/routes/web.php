@@ -43,6 +43,9 @@ Route::get('/informasi', function () {
 Route::get('/MasterDataPasar', function () {
     return view('main.MasterDataPasar');
 });
+Route::get('/MasterDataKomoditas', function () {
+    return view('main.MasterDataKomoditas');
+});
 Route::get('/favorit', function () {
     return view('main.favorit');
 });
