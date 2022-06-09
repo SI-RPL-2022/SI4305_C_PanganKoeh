@@ -43,6 +43,9 @@ Route::get('/informasi', function () {
 Route::get('/InputArtikel', function () {
     return view('main.InputArtikel');
 });
+Route::get('/PerbandinganHarga', function () {
+    return view('main.PerbandinganHarga');
+});
 Route::get('/MasterDataPasar', function () {
     return view('main.MasterDataPasar');
 });
