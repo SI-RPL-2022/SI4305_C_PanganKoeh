@@ -9,7 +9,7 @@
 
     <div class="beranda">
         <h2 align="center" style="padding-top: 50px; color:#677A68">INPUT DATA PASAR</h2>
-        <div class="container" style="padding-top: 60px; padding-bottom: 130px" align="center">
+        <div class="container" style="padding-top: 30px; padding-bottom: 130px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
                     <form action="" method="post" enctype="multipart/form-data" >

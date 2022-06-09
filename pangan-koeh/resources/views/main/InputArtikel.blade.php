@@ -8,34 +8,28 @@
     @include('layouts.navbarlogin')
 
     <div class="beranda">
-        <h2 align="center" style="padding-top: 50px; color:#677A68">INPUT DATA KOMODITAS</h2>
-        <div class="container" style="padding-top: 30px; padding-bottom: 130px" align="center">
+        <h2 align="center" style="padding-top: 50px; color:#677A68">INPUT ARTIKEL</h2>
+        <div class="container" style="padding-top: 30px; padding-bottom: 100px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
                     <form action="" method="post" enctype="multipart/form-data" >
                         @csrf
                         <div class="row mt-3 mb-3">
-                            <label for="namaPasar" class="col-sm-2 col-form-label">Nama Komoditas</label>
+                            <label for="judulArtikel" class="col-sm-2 col-form-label">Judul Artikel</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="namaPasar" name="namaPasar" placeholder="Masukkan nama pasar">
+                                <input type="text" class="form-control" id="judulArtikel" name="judulArtikel" placeholder="Masukkan judul artikel">
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="pasar" class="col-sm-2 col-form-label">Pasar</label>
+                            <label for="isiArtikel" class="col-sm-2 col-form-label">Isi Artikel</label>
                             <div class="col-sm-10">
-                                <select class="form-select" aria-label="Default select example" name="pasar">
-                                    <option selected>Pilih Pasar</option>
-                                    <option >Pasar Pangalengan</option>
-                                    <option >Pasar Baleendah</option>
-                                    <option >Pasar Banjaran</option>
-                                    <option >Pasar jeung sajabana</option>
-                                </select>
+                                <textarea type="text" class="form-control" id="isiArtikel" name="isiArtikel" placeholder="Masukkan isi artikel" style="height: 120px"></textarea>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="gambarKomoditas" class="col-sm-2 col-form-label">Foto Komoditas</label>
+                            <label for="gambarArtikel" class="col-sm-2 col-form-label">Gambar Artikel</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control" id="gambarKomoditas" name="gambarKomoditas">
+                                <input type="file" class="form-control" id="gambarArtikel" name="gambarArtikel">
                             </div>
                         </div>
                         <div class="mb-3">
