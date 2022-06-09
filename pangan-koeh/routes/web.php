@@ -40,9 +40,9 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 Route::get('/informasi', function () {
     return view('main.informasi');
 });
-// Route::get('/InputDataPangan', function () {
-//     return view('main.InputDataPangan');
-// });
+Route::get('/MasterDataPasar', function () {
+    return view('main.MasterDataPasar');
+});
 Route::get('/favorit', function () {
     return view('main.favorit');
 });

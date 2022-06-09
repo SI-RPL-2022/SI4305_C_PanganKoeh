@@ -16,11 +16,6 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">
-        @if (Auth::user()->fresh()->role == 'ADM')
-          <li class="nav-item">
-              <a class="nav-link" href="/DataVolunteer">Data Volunteer</a>
-          </li>
-        @endif
           <li>
               <a class="nav-link" href="/">Beranda</a>
           </li>
@@ -68,7 +63,11 @@
         <ul class="dropdown-menu dropdown-menu-sm-end" aria-labelledby="navbarDropdown" style="list-style: none;">
           <li><a class="dropdown-item" href="/Profile">My Profile</a></li>
           @if (Auth::user()->fresh()->role == 'ADM')
+            <li><a class="dropdown-item" href="/DataVolunteer">Data Volunteer</a></li>
             <li><a class="dropdown-item" href="/approval">Approval</a></li>
+            <li><a class="dropdown-item" href="#">Input Artikel</a></li>
+            <li><a class="dropdown-item" href="/MasterDataPasar">Input Data Pasar</a></li>
+            <li><a class="dropdown-item" href="#">Input Data Komoditas</a></li>
           @elseif (Auth::user()->fresh()->role == 'VLNTR')
             <li><a class="dropdown-item" href="/PilihPasar/create">Input Data Pangan</a></li>
           @endif

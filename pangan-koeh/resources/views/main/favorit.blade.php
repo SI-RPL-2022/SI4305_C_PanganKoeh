@@ -7,7 +7,8 @@
 @section('content')
     @include('layouts.navbarlogin')
 
-    <section>
+    <div class="beranda">
+        <section>
             <div class="container py-5">
                 <div class="title-page pb-5">
                     <center>
@@ -49,7 +50,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+            </div>
+        </section>
+    </div>
 
 @endsection
