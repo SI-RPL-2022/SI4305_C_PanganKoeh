@@ -7,7 +7,7 @@
 @section('content')
     @include('layouts.navbarlogin')
     <div class="beranda">
-        <h3 align="center" tyle="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>DAFTAR VOLUNTEER</b></h3>
+        <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>DAFTAR VOLUNTEER</b></h3>
         <div class="container" style="padding-top: 60px; padding-bottom: 100px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
