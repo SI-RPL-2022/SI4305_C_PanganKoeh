@@ -31,7 +31,7 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title pt-2 pb-3"><b>Pasar Ciroyom</b></h5>
-                                    <p class="card-text pb-3"><small><b>Jl. Ciroyom Bar., <span id="kecamatan">Kec. Andir</span>, <span id="kota">Kota Bandung</span>, Jawa Barat 40172</b></small></p>
+                                    <p class="card-text pb-3"><small><b>Jl. Ciroyom Bar, <span id="kecamatan">Kec. Andir</span>, <span id="kota">Kota Bandung</span>, Jawa Barat 40172</b></small></p>
                                     <p class="card-text" style="color : #00A560"><small><b>Jam buka</b></small></p>
                                 </div>
                             </div>

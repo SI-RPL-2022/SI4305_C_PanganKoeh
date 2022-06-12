@@ -206,12 +206,12 @@
           <h1 style="color: #677A68"><b>Tentang Kami</b></h1>
         </center>
         <center>
-          <svg id="bulet" width="100" height="100" viewBox="0 0 352 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg id="bulet" width="100" height="100" viewBox="0 0 352 344" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="175.782" cy="171.75" rx="175.782" ry="171.75" fill="#3CD3A6"/>
-          </svg>
+          </svg> -->
           <div class="card text-center py-4 px-3 shadow-lg p-3 mb-5 bg-white rounded-0 justify-content-center" id="cardAbout">
             <div class="card-body">
-              <p class="card-text py-2">Pangan-Koeh memberikan layanan informasi-informasi mengenai komodtitas pangan, berupa perbandingan harga komoditas pangan antar pasar, harga rata-rata komoditas pangan pada setiap pasar, dan harga tertinggi dan terendah dari setiap komoditas pangan.</p>
+              <p class="card-text py-2" style="text-align: justify;">Pangan-Koeh memberikan layanan informasi-informasi mengenai komodtitas pangan, berupa perbandingan harga komoditas pangan antar pasar, harga rata-rata komoditas pangan pada setiap pasar, dan harga tertinggi dan terendah dari setiap komoditas pangan.</p>
               <p class="card-text"><b>Kelompok 3</b></p>
               <p class="card-text">SI-43-05</p>
             </div>

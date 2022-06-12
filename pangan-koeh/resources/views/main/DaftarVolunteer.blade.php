@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="ttl" class="col-sm-2 col-form-label">TTL</label>
+                            <label for="ttl" class="col-sm-2">TTL</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="ttl" name="ttl" placeholder="Masukkan tempat tanggal lahir Anda">
                             </div>

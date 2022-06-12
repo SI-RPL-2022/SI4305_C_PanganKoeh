@@ -7,7 +7,7 @@
 @section('content')
     @include('layouts.navbarlogin')
     <h3 align="center" style="padding-top: 50px"><b>UBAH PROFILE</b></h3>
-    <div class="container" style="padding-top: 60px; padding-left: 50px; padding-bottom: 40px">
+    <div class="container" style="padding-top: 60px; padding-bottom: 40px" align="center">
         <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
                 <form method="POST" action="/DaftarVolunteer/{{ Auth::user()->id }}">
