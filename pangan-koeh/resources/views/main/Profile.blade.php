@@ -9,7 +9,7 @@
 
     <div class="beranda">
         <section>
-            <h3 class="pt-5" align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px;">PROFILE</h1>
+            <h3 class="pt-5" align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px;"><b>PROFILE</b></h1>
             <div class="container py-5 pb-5" style="padding-left: 70px">
                 <form class="shadow-lg bg-white rounded-0 justify-content-center" style="width: 900px; height: 500px; margin-left:8vw">
                     <div class="row">

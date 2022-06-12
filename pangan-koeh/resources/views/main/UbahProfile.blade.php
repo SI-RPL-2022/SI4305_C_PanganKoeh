@@ -6,10 +6,11 @@
 
 @section('content')
     @include('layouts.navbarlogin')
-    <h3 align="center" style="padding-top: 50px"><b>UBAH PROFILE</b></h3>
-    <div class="container" style="padding-top: 60px; padding-bottom: 40px" align="center">
+  <div class="beranda">
+    <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>UBAH PROFILE</b></h3>
+    <div class="container" style="padding-top: 50px; padding-bottom: 250px" align="center">
         <div class="card" style="width: 65rem;">
-                <div class="card-body" style="padding-top: 10px;">
+                <div class="card-body" style="padding-top: 30px;">
                 <form method="POST" action="/DaftarVolunteer/{{ Auth::user()->id }}">
                   @method('put')
                   @csrf
@@ -46,4 +47,5 @@
                 </div>
         </div>
     </div>
+</div>
 @endsection

@@ -7,7 +7,7 @@
 @section('content')
     @include('layouts.navbarlogin')
     <div class="beranda">
-        <h3 align="center" style="padding-top: 50px"><b>DAFTAR VOLUNTEER</b></h3>
+        <h3 align="center" tyle="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>DAFTAR VOLUNTEER</b></h3>
         <div class="container" style="padding-top: 60px; padding-bottom: 100px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="ttl" class="col-sm-2">TTL</label>
+                            <label for="ttl" class="col-sm-2 col-form-label">TTL</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="ttl" name="ttl" placeholder="Masukkan tempat tanggal lahir Anda">
                             </div>

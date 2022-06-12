@@ -7,7 +7,8 @@
 @section('content')
     @include('layouts.navbarlogin')
     <div class="beranda">
-    <div class="container-fluid py-auto" style="padding-top: 100px; padding-bottom: 400px" align="center">
+    <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>DATA VOLUNTEER</b></h3>
+    <div class="container-fluid py-auto" style="padding-top: 50px; padding-bottom: 400px" align="center">
             <div class="card p-3 mb-5 bg-body rounded" style="width: 60rem;">
                 <table class="table">
                 <tr align="center">
