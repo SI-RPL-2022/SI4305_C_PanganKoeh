@@ -20,10 +20,16 @@
                                 <input type="text" class="form-control" id="judulArtikel" name="judulArtikel" placeholder="Masukkan judul artikel">
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="isiArtikel" class="col-sm-2 col-form-label">Isi Artikel</label>
+                        <div class="row mt-3 mb-3">
+                            <label for="slug" class="col-sm-2 col-form-label">Slug</label>
                             <div class="col-sm-10">
-                                <textarea type="text" class="form-control" id="isiArtikel" name="isiArtikel" placeholder="Masukkan isi artikel" style="height: 120px"></textarea>
+                                <input type="text" class="form-control" id="slug" name="slug">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="body" class="col-sm-2 col-form-label">Isi Artikel</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control" id="body" name="body" placeholder="Masukkan isi artikel" style="height: 120px"></textarea>
                             </div>
                         </div>
                         <div class="row mb-3">

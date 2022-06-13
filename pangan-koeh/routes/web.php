@@ -16,6 +16,7 @@ use App\Http\Controllers\RegisterVolunteerController;
 use App\Http\Controllers\InputPanganController;
 use App\Http\Controllers\PilihPasarController;
 use App\Http\Controllers\FavoritController;
+use App\Http\Controllers\InformasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,8 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 // Route::get('/hargaPangan', function () {
 //     return view('main.Dashboard');
 // });
-Route::get('/informasi', function () {
-    return view('main.informasi');
-});
+
+
 Route::get('/InputArtikel', function () {
     return view('main.InputArtikel');
 });
@@ -73,6 +73,10 @@ Route::middleware('admin')->group(function () {
     Route::post('/tolak', [ApprovalController::class, 'tolak']);
     Route::post('/active', [ApprovalController::class, 'active']);
     Route::post('/inactive', [ApprovalController::class, 'inactive']);
+
+    Route::get('/Informasi', [InformasiController::class, 'index']);
+    Route::get('/Informasi/create', [InformasiController::class, 'create']);
+    Route::get('/Informasi/{informasi:slug}', [InformasiController::class, 'show']);
 });
 
 Route::middleware('user')->group(function () {

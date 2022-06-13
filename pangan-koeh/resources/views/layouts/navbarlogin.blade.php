@@ -23,7 +23,7 @@
           <a class="nav-link" href="#cardAbout">Tentang Kami</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/informasi">Informasi</a>
+          <a class="nav-link" href="/Informasi">Informasi</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@
           @if (Auth::user()->fresh()->role == 'ADM')
             <li><a class="dropdown-item" href="/DataVolunteer">Data Volunteer</a></li>
             <li><a class="dropdown-item" href="/approval">Approval</a></li>
-            <li><a class="dropdown-item" href="#">Input Artikel</a></li>
+            <li><a class="dropdown-item" href="/InputArtikel">Input Artikel</a></li>
             <li><a class="dropdown-item" href="/MasterDataPasar">Input Data Pasar</a></li>
             <li><a class="dropdown-item" href="/MasterDataKomoditas">Input Data Komoditas</a></li>
           @elseif (Auth::user()->fresh()->role == 'VLNTR')
