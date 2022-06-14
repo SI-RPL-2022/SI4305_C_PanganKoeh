@@ -15,9 +15,9 @@
                     <form action="" method="post" enctype="multipart/form-data" >
                         @csrf
                         <div class="row mt-3 mb-3">
-                            <label for="judulArtikel" class="col-sm-2 col-form-label">Judul Artikel</label>
+                            <label for="judul" class="col-sm-2 col-form-label">Judul Artikel</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judulArtikel" name="judulArtikel" placeholder="Masukkan judul artikel">
+                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul artikel">
                             </div>
                         </div>
                         <div class="row mt-3 mb-3">
@@ -26,10 +26,21 @@
                                 <input type="text" class="form-control" id="slug" name="slug">
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="body" class="col-sm-2 col-form-label">Isi Artikel</label>
+                        <div class="row mt-3 mb-3">
+                            <label for="topik" class="col-sm-2 col-form-label">Topik</label>
                             <div class="col-sm-10">
-                                <textarea type="text" class="form-control" id="body" name="body" placeholder="Masukkan isi artikel" style="height: 120px"></textarea>
+                                <select class="form-select" name="topik" id="topik">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="isiArtikel" class="col-sm-2 col-form-label">Isi Artikel</label>
+                            <div class="col-sm">
+                                <input id="isiArtikel" type="hidden" name="isiArtikel">
+                                <trix-editor input="isiArtikel"></trix-editor>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -47,4 +58,23 @@
             </div>
         </div>
     </div>
+ @endsection
+
+ @section('kepalaJavaScript')
+    <script>
+        const judul = document.querySelector('#judul');
+        const slug = document.querySelector('#slug');
+
+        judul.addEventListener('change',function() {
+            fetch('/Informasi/cekSlug?judul='+judul.value)
+                .then(response=>response.json())
+                .then(data=>slug.value=data.slug)
+        });
+
+        console.log(judul);
+
+        document.addEventListener('trix-file-accept', function(e) {
+            e.preventDefault();
+        })
+    </script>
  @endsection

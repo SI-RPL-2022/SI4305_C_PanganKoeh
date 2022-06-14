@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Informasi;
+use App\Models\Pangan;
 use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class InformasiController extends Controller
 {
@@ -27,7 +29,9 @@ class InformasiController extends Controller
      */
     public function create()
     {
-        return view('main.InputArtikel');
+        return view('main.InputArtikel', [
+            'categories' => Pangan::all()
+        ]);
     }
 
     /**
@@ -86,5 +90,11 @@ class InformasiController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function cekSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Informasi::class, 'slug', $request->judul);
+        return response()->json(['slug' => $slug]);
     }
 }

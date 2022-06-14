@@ -16,6 +16,14 @@
     <!--Kebutuhan Charts-->
     @yield('kepalaJavaScript')
 
+    <!--Trix Editor-->
+    <link rel="stylesheet" type="text/css" href="/frontend/css/trix.css">
+    <script type="text/javascript" src="/frontend/js/trix.js"></script>
+    <style>
+      trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
+      }
+    </style>
 
     <title>@yield('title')</title>
   </head>
