@@ -5,24 +5,17 @@
 @endsection
 
 @section ("kepalaJavaScript")
+
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
     google.charts.setOnLoadCallback(drawStuff);
-
     function drawStuff() {
+
         var data = new google.visualization.arrayToDataTable([
         ['Komoditas', 'Harga'],
-        ['{{ $pangan[$grafik[0]->id_komoditas-1]->name }}', {{ $grafik[0]->harga }}],
-        ['{{ $pangan[$grafik[1]->id_komoditas-1]->name }}', {{ $grafik[1]->harga }}],
-        ['{{ $pangan[$grafik[2]->id_komoditas-1]->name }}', {{ $grafik[2]->harga }}],
-        ['{{ $pangan[$grafik[3]->id_komoditas-1]->name }}', {{ $grafik[3]->harga }}],
-        ['{{ $pangan[$grafik[4]->id_komoditas-1]->name }}', {{ $grafik[4]->harga }}],
-        ['{{ $pangan[$grafik[5]->id_komoditas-1]->name }}', {{ $grafik[5]->harga }}],
-        ['{{ $pangan[$grafik[6]->id_komoditas-1]->name }}', {{ $grafik[6]->harga }}],
-        ['{{ $pangan[$grafik[7]->id_komoditas-1]->name }}', {{ $grafik[7]->harga }}],
-        ['{{ $pangan[$grafik[8]->id_komoditas-1]->name }}', {{ $grafik[8]->harga }}],
-        ['{{ $pangan[$grafik[9]->id_komoditas-1]->name }}', {{ $grafik[9]->harga }}]
+        <?php echo $data;?>
         ]);
 
         var options = {
@@ -32,7 +25,7 @@
         legend: { position: 'none' },
         chart: { title: 'Harga Pangan di {{ $pasar->name }}',
                 subtitle: 'Harga berdasarkan rupiah' },
-        bars: 'vertical', // Required for Material Bar Charts.
+        bars: 'horizontal', // Required for Material Bar Charts.
         axes: {
             y: {
             0   : { side: 'left', label: 'Harga'} // Top x-axis.

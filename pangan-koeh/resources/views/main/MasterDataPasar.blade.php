@@ -26,7 +26,7 @@
                                 <select class="form-select" aria-label="Default select example" name="kecamatan">
                                     <option selected>Pilih Kecamatan Pasar</option>
                                     <option >Kecamatan Pangalengan</option>
-                                    <option >ecamatan Baleendah</option>
+                                    <option >Kecamatan Baleendah</option>
                                     <option >Kecamatan Banjaran</option>
                                     <option >Kecamatan Pasar jeung sajabana</option>
                                 </select>

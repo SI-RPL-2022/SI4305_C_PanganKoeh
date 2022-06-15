@@ -12,17 +12,19 @@ class CobaChartController extends Controller
     public function barchart($id)
     {
 
-        $result = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE id_pasar = $id group by id_komoditas"));
-        // $data = "";
-        // foreach ($result as $val) {
-        //     $data .= "[new Date('" . $val->tanggal . "'), " . $val->harga . "],";
-        // }
-        // // dd($data);
-        // $chartData = $data;
+        $pangan = Pangan::all();
+        $result = DB::select(DB::raw("SELECT DISTINCT prices.id_komoditas, prices.tanggal,prices.harga from prices,(SELECT id_komoditas,max(tanggal) as tanggal FROM `prices` WHERE id_pasar = $id GROUP BY id_komoditas) as max_harga WHERE prices.id_komoditas = max_harga.id_komoditas AND prices.tanggal = max_harga.tanggal GROUP BY id_komoditas"));
+        $data = "";
+        foreach ($result as $item) {
+            $data .= "['" . $pangan[($item->id_komoditas) - 1]->name . "', " . $item->harga . "],";
+        }
+        // dd($data);
+        $chartData = $data;
         return view('main.Dashboard', [
             'pasar' => Market::find($id),
             'pangan' => Pangan::all(),
-            'grafik' => $result
+            'grafik' => $result,
+            'data' => $chartData
         ]);
     }
     public function linechart($id_pangan, $id_pasar)
