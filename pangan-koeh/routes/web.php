@@ -13,6 +13,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UbahProfileController;
 use App\Http\Controllers\defController;
 use App\Http\Controllers\RegisterVolunteerController;
+use App\Http\Controllers\PasarTerdekatController;
 use App\Http\Controllers\InputPanganController;
 use App\Http\Controllers\PilihPasarController;
 use App\Http\Controllers\FavoritController;
@@ -55,9 +56,6 @@ Route::get('/MasterDataKomoditas', function () {
 Route::get('/favorit', function () {
     return view('main.favorit');
 });
-Route::get('/PasarTerdekat', function () {
-    return view('main.PasarTerdekat');
-});
 
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -81,6 +79,8 @@ Route::middleware('admin')->group(function () {
 });
 
 Route::middleware('user')->group(function () {
+    Route::get('/PasarTerdekat', [PasarTerdekatController::class, 'index']);
+    Route::post('/PasarTerdekat', [PasarTerdekatController::class, 'find']);
     Route::get('/home', [HomeController::class, 'index']);
     Route::get('/DaftarVolunteer', [DaftarVolunteerController::class, 'index']);
     Route::post('/DaftarVolunteer', [DaftarVolunteerController::class, 'store']);

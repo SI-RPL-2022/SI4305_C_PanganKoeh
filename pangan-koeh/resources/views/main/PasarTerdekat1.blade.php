@@ -14,10 +14,10 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-6 offset-md-3">
-                            <select class="form-select" aria-label="Default select example" name="id"> 
+                            <select class="form-select" aria-label="Default select example" name="id">
                                 <option>Pilih Kecamatan</option>
-                                @foreach ($pasar as $item)
-                                <option value="{{ $item->id }}">{{ $item->kecamatan }}</option>
+                                @foreach ($kec as $item)
+                                    <option value="{{ $item->id }}">{{ $item->kecamatan }}</option>
                                 @endforeach
                             </select>
                         </div>
