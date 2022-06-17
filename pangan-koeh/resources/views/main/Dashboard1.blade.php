@@ -95,7 +95,7 @@ Pangankoeh
                         <div class="row row-cols-4">
                             @foreach ($pangan as $item)
                             <div class="col pb-4">
-                                <a href="/hargaPangan1/{{ $item->id }}/{{ $pasar->id }}" type="button" class="btn btn-success rounded-pill py-2">{{ $item->name }}</a>
+                                <a href="/hargaPangan1/{{ $item->id }}/{{ $pasar->id }}" type="button" class="btn btn-success rounded-pill py-2" style="width:9rem; font-size:12px; background-color:#3CD3A6">{{ $item->name }}</a>
                             </div>
                             @endforeach
                         </div>
