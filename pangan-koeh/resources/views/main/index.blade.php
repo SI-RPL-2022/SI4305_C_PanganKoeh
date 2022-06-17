@@ -46,11 +46,11 @@
       </section>
 
       <section id="daftarPangan">
-          <center class="py-3">
-            <h1 style="color: #677A68"><b>Rata-rata Harga Pangan</b></h1>
+          <center>
+            <h1 style="color: #677A68; margin-bottom: 50px"><b>Rata-rata Harga Pangan</b></h1>
           </center>
-          <div id="carouselExample" class="carousel slide py-5" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" style="margin-bottom: -50px">
               <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -58,43 +58,55 @@
             <div class="carousel-inner" id="pangan">
               <div class="carousel-item active">
                 <div class="row">
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
-                    <img src="frontend\gambar\Pangan\1.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Minyak Goreng Sanco /liter</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\2.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Beras Pandan Wangi /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 12.813,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Beras Pandan Wangi /kg</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 12.813,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\3.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Cabe Hijau Besar /ons</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 4.000,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Cabe Hijau Besar /ons</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 4.000,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\4.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Daging Ayam Potong /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 38.000,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Daging Ayam Potong /kg</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 38.000,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\5.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Bawang Merah /ons</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 3.200,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Bawang Merah /ons</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -102,43 +114,55 @@
 
               <div class="carousel-item">
                 <div class="row">
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Tomat /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Tomat /kg</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 14.500,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\7.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Gula Gulaku /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Gula Gulaku /kg</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Daging Sapi /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Daging Sapi /kg</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\9.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Cabe Rawit /ons</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
-                    <img src="frontend\gambar\Pangan\10.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Paprika /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <h5 class="card-title" style="font-size:15px"><b>Cabe Rawit /ons</b></h5>  <!-- Dari database -->
+                      <div class="btn btn-group" style="width: 12rem;">
+                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                        <a href="" class="btn btn-danger">
+                          <i class="fa-regular fa-heart"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -146,48 +170,61 @@
 
               <div class="carousel-item">
                 <div class="row">
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
-                    <img src="frontend\gambar\Pangan\11.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Cabe Merah Segar /ons</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
-                    </div>
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
+                      <img src="frontend\gambar\Pangan\10.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
+                      <div class="card-body">
+                        <h5 class="card-title" style="font-size:15px"><b>Paprika /kg</b></h5> <!-- Dari database -->
+                        <div class="btn btn-group" style="width: 12rem;">
+                          <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                          <a href="" class="btn btn-danger">
+                            <i class="fa-regular fa-heart"></i>
+                          </a>
+                        </div>
+                      </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
-                    <img src="frontend\gambar\Pangan\12.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Sayur Sawi Hijau /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\13.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Sayur Kangkung /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <div class="btn btn-group" style="width: 12rem;">
+                          <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                          <a href="" class="btn btn-danger">
+                            <i class="fa-regular fa-heart"></i>
+                          </a>
+                        </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100 mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\14.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Bawang Bombay /kg</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <div class="btn btn-group" style="width: 12rem;">
+                          <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                          <a href="" class="btn btn-danger">
+                            <i class="fa-regular fa-heart"></i>
+                          </a>
+                        </div>
                     </div>
                   </div>
 
-                  <div align="center" class="card h-100mx-auto" style="width: 12rem;">
+                  <div align="center" class="card h-100mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\15.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
                     <div class="card-body">
                       <h5 class="card-title" style="font-size:15px"><b>Daun Seledri /ons</b></h5>
-                      <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. 14.500,-</a>
+                      <div class="btn btn-group" style="width: 12rem;">
+                          <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
+                          <a href="" class="btn btn-danger">
+                            <i class="fa-regular fa-heart"></i>
+                          </a>
+                        </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <button class="carousel-control-prev" id="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>

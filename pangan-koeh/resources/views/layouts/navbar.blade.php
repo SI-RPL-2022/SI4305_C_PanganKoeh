@@ -35,7 +35,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Perbandingan Harga</a>
+          <a class="nav-link" href="/PerbandinganHarga">Perbandingan Harga</a>
         </li>
       </ul>
       <form class="d-flex">
