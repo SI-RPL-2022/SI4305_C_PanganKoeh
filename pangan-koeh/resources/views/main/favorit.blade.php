@@ -17,7 +17,7 @@
                 </div>
                 <div class="row">
                     <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                        <img src="frontend\gambar\Pangan\3.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
+                        <img src="frontend\gambar\Pangan\3.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
                         <div class="card-body">
                         <h5 class="card-title" style="font-size:15px"><b>Cabe Hijau Besar /ons</b></h5>
                         <div class="btn btn-group" style="width: 12rem;">
@@ -30,7 +30,7 @@
                     </div>
 
                     <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                        <img src="frontend\gambar\Pangan\7.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px">
+                        <img src="frontend\gambar\Pangan\7.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
                         <div class="card-body">
                         <h5 class="card-title" style="font-size:15px"><b>Gula Gulaku /kg</b></h5>
                         <div class="btn btn-group" style="width: 12rem;">
