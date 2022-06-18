@@ -17,7 +17,7 @@
                         <div class="row mt-3 mb-3">
                             <label for="judul" class="col-sm-2 col-form-label">Judul Artikel</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul artikel">
+                                <input type="text" class="form-control" id="judul" name="judul">
                             </div>
                         </div>
                         <div class="row mt-3 mb-3">
@@ -58,22 +58,17 @@
             </div>
         </div>
     </div>
- @endsection
-
- @section('kepalaJavaScript')
     <script>
         const judul = document.querySelector('#judul');
         const slug = document.querySelector('#slug');
 
-        judul.addEventListener('change',function() {
-            fetch('/Informasi/cekSlug?judul='+judul.value)
-                .then(response=>response.json())
-                .then(data=>slug.value=data.slug)
+        judul.addEventListener('change', function() {
+           fetch('/Informasi/cekSlug/' + judul.value)
+            .then(response => response.json())
+            .then(data => slug.value = data.slug)
         });
 
-        console.log(judul);
-
-        document.addEventListener('trix-file-accept', function(e) {
+        document.addEventListener("trix-file-accept", function(e) {
             e.preventDefault();
         })
     </script>
