@@ -74,6 +74,7 @@ Route::middleware('admin')->group(function () {
 
     Route::get('/Informasi', [InformasiController::class, 'index']);
     Route::get('/Informasi/create', [InformasiController::class, 'create']);
+    Route::post('/Informasi/store', [InformasiController::class, 'store']);
     Route::get('/Informasi/{informasi:slug}', [InformasiController::class, 'show']);
     Route::get('/Informasi/cekSlug/{judul}', [InformasiController::class, 'cekSlug']);
 });

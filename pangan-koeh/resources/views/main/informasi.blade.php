@@ -22,6 +22,11 @@
                 <div class="title-page pb-5">
                     <center>
                         <h2 style="color: #677A68">BERITA TERKINI</h2>
+                        @if (session()->has('success'))
+                          <div class="alert alert-success" role="alert">
+                            {{ session('success') }}
+                          </div>
+                        @endif
                     </center>
                 </div>
                 <div class="body-page">

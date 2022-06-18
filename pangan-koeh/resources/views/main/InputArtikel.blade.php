@@ -12,18 +12,28 @@
         <div class="container" style="padding-top: 30px; padding-bottom: 160px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
-                    <form action="" method="post" enctype="multipart/form-data" >
+                    <form action="/Informasi/store" method="post" enctype="multipart/form-data" >
                         @csrf
                         <div class="row mt-3 mb-3">
                             <label for="judul" class="col-sm-2 col-form-label">Judul Artikel</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judul" name="judul">
+                                <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" required autofocus value="{{ old('judul') }}">
+                                @error('judul')
+                                    <div style="text-align: left" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mt-3 mb-3">
                             <label for="slug" class="col-sm-2 col-form-label">Slug</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="slug" name="slug">
+                                <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
+                                @error('slug')
+                                    <div style="text-align: left" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mt-3 mb-3">
@@ -31,16 +41,23 @@
                             <div class="col-sm-10">
                                 <select class="form-select" name="topik" id="topik">
                                     @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @if (old('topik') == $category->id)
+                                            <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                                        @else
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endif
                                     @endforeach
                                   </select>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="isiArtikel" class="col-sm-2 col-form-label">Isi Artikel</label>
-                            <div class="col-sm">
-                                <input id="isiArtikel" type="hidden" name="isiArtikel">
-                                <trix-editor input="isiArtikel"></trix-editor>
+                            <label for="body" class="col-sm-2 col-form-label">Isi Artikel</label>
+                            <div style="text-align: left" class="trix-content col-sm-10">
+                                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
+                                <trix-editor input="body"></trix-editor>
+                                @error('body')
+                                <small style="text-align: left" class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">

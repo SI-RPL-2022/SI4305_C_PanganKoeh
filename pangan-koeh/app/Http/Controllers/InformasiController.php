@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Informasi;
 use App\Models\Pangan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class InformasiController extends Controller
@@ -42,7 +43,18 @@ class InformasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request ->validate([
+            'judul' => 'required|max:255',
+            'slug' => 'required|unique:informasis',
+            'topik' => 'required',
+            'body' => 'required'
+        ]);
+
+        $validate['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        Informasi::create($validate);
+
+        return redirect('/Informasi')->with('succes', 'Artikel baru berhasil ditambahkan!');
     }
 
     /**

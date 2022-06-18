@@ -65,7 +65,7 @@
           @if (Auth::user()->fresh()->role == 'ADM')
             <li><a class="dropdown-item" href="/DataVolunteer">Data Volunteer</a></li>
             <li><a class="dropdown-item" href="/approval">Approval</a></li>
-            <li><a class="dropdown-item" href="/InputArtikel">Input Artikel</a></li>
+            <li><a class="dropdown-item" href="/Informasi/create">Input Artikel</a></li>
             <li><a class="dropdown-item" href="/MasterDataPasar">Input Data Pasar</a></li>
             <li><a class="dropdown-item" href="/MasterDataKomoditas">Input Data Komoditas</a></li>
           @elseif (Auth::user()->fresh()->role == 'VLNTR')
