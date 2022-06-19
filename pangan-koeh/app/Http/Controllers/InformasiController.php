@@ -78,7 +78,12 @@ class InformasiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dataInfo = Informasi::where('id', $id)->first();
+
+        return view('main.EditInformasi', [
+            "info" => $dataInfo,
+            'categories' => Pangan::all()
+        ]);
     }
 
     /**
@@ -90,7 +95,32 @@ class InformasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dataInfo = Informasi::where('id', $id)->first();
+
+        $rules = [
+            'judul' => 'required|max:255',
+            'topik' => 'required',
+            'body' => 'required'
+        ];
+
+        if ($request->slug != $dataInfo->slug) {
+            $rules['slug'] = 'required|unique:informasis';
+        }
+
+        $validate = $request->validate($rules);
+
+        $validate['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        Informasi::where('id', $id)
+                    ->update([
+                        'judul' => $validate['judul'],
+                        'slug' => $validate['slug'],
+                        'category_id' => $validate['topik'],
+                        'excerpt' => $validate['excerpt'],
+                        'body' => $validate['body']
+                    ]);
+
+        return redirect('/Informasi')->with('success', 'Artikel baru berhasil diperbarui!');
     }
 
     /**
