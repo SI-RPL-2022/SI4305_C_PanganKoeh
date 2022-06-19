@@ -54,7 +54,7 @@ class InformasiController extends Controller
 
         Informasi::create($validate);
 
-        return redirect('/Informasi')->with('succes', 'Artikel baru berhasil ditambahkan!');
+        return redirect('/Informasi')->with('success', 'Artikel baru berhasil ditambahkan!');
     }
 
     /**
@@ -101,7 +101,9 @@ class InformasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Informasi::destroy($id);
+
+        return redirect('/Informasi')->with('success', 'Artikel berhasil dihapus!');
     }
 
     public function cekSlug(Request $request)

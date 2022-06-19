@@ -77,6 +77,7 @@ Route::middleware('admin')->group(function () {
     Route::post('/Informasi/store', [InformasiController::class, 'store']);
     Route::get('/Informasi/{informasi:slug}', [InformasiController::class, 'show']);
     Route::get('/Informasi/cekSlug/{judul}', [InformasiController::class, 'cekSlug']);
+    Route::post('/Informasi/delete/{id}', [InformasiController::class, 'destroy']);
 });
 
 Route::middleware('user')->group(function () {
