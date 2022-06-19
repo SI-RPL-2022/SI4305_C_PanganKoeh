@@ -27,7 +27,7 @@
                 </div>
               @endif
                 <center>
-                    <h2 style="color: #677A68">BERITA TERKINI</h2>
+                <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>BERITA TERKINI</b></h3>
                 </center>
             </div>
             <div class="body-page">
