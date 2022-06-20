@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('kecamatan');
             $table->string('alamat');
+            $table->string('jam');
             $table->string('foto1')->nullable();
             $table->string('foto2')->nullable();
             $table->string('foto3')->nullable();

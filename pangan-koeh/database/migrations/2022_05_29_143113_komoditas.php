@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('pangans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('gambar')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

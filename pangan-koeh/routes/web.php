@@ -19,6 +19,8 @@ use App\Http\Controllers\PilihPasarController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\PerbandinganHargaController;
+use App\Http\Controllers\InputKomoditasController;
+use App\Http\Controllers\InputPasarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,12 +50,12 @@ Route::get('/InputArtikel', function () {
 // Route::get('/PerbandinganHarga', function () {
 //     return view('main.PerbandinganHarga');
 // });
-Route::get('/MasterDataPasar', function () {
-    return view('main.MasterDataPasar');
-});
-Route::get('/MasterDataKomoditas', function () {
-    return view('main.MasterDataKomoditas');
-});
+// Route::get('/MasterDataPasar', function () {
+//     return view('main.MasterDataPasar');
+// });
+// Route::get('/MasterDataKomoditas', function () {
+//     return view('main.MasterDataKomoditas');
+// });
 // Route::get('/favorit', function () {
 //     return view('main.favorit');
 // });
@@ -72,6 +74,10 @@ Route::middleware('admin')->group(function () {
     Route::post('/tolak', [ApprovalController::class, 'tolak']);
     Route::post('/active', [ApprovalController::class, 'active']);
     Route::post('/inactive', [ApprovalController::class, 'inactive']);
+    Route::get('/MasterDataKomoditas', [InputKomoditasController::class, 'index']);
+    Route::post('/inputkomoditas', [InputKomoditasController::class, 'inputkomoditas']);
+    Route::get('/MasterDataPasar', [InputPasarController::class, 'index']);
+    Route::post('/inputpasar', [InputPasarController::class, 'inputpasar']);
 
     Route::get('/Informasi', [InformasiController::class, 'index']);
     Route::get('/Informasi/create', [InformasiController::class, 'create']);

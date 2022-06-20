@@ -8,34 +8,28 @@
     @include('layouts.navbarlogin')
 
     <div class="beranda">
+        @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         <h2 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>INPUT DATA KOMODITAS</b></h2>
         <div class="container" style="padding-top: 50px; padding-bottom: 300px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
-                    <form action="" method="post" enctype="multipart/form-data" >
+                    <form action="/inputkomoditas" method="post" enctype="multipart/form-data" >
                         @csrf
                         <div class="row mt-3 mb-3">
-                            <label for="namaPasar" class="col-sm-2 col-form-label">Nama Komoditas</label>
+                            <label for="name" class="col-sm-2 col-form-label">Nama Komoditas</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="namaPasar" name="namaPasar" placeholder="Masukkan nama pasar">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komoditas">
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="pasar" class="col-sm-2 col-form-label">Pasar</label>
+                            <label for="gambar" class="col-sm-2 col-form-label">Foto Komoditas</label>
                             <div class="col-sm-10">
-                                <select class="form-select" aria-label="Default select example" name="pasar">
-                                    <option selected>Pilih Pasar</option>
-                                    <option >Pasar Pangalengan</option>
-                                    <option >Pasar Baleendah</option>
-                                    <option >Pasar Banjaran</option>
-                                    <option >Pasar jeung sajabana</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="gambarKomoditas" class="col-sm-2 col-form-label">Foto Komoditas</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control" id="gambarKomoditas" name="gambarKomoditas">
+                                <input type="file" class="form-control" id="gambar" name="gambar">
                             </div>
                         </div>
                         <div class="mb-3">
