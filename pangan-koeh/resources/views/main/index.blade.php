@@ -70,8 +70,6 @@
                         </a>
                       </div><center>
                   </div>
-                  @endif
-                  @endforeach
                 </div>
               </div>
 
