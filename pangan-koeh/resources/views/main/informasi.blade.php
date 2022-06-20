@@ -104,7 +104,7 @@
                         @if ($informasi->image)
                           <img src="{{ asset('storage/' . $informasi->image) }}" style="height: 220px; object-fit: cover" id="card-informasi" class="img-fluid rounded-start" alt="{{ $informasi->slug }}">
                         @else
-                          <img src="{{ asset('frontend/gambar/logo-login-register.png') }}" style="height: 220px; object-fit: cover" class="img-fluid rounded-start" alt="Pangan-Koeh">
+                          <img src="{{ asset('frontend/gambar/logo-navbar.png') }}" style="height: 220px; object-fit: cover" class="img-fluid rounded-start" alt="Pangan-Koeh">
                         @endif
                             
                       </div>

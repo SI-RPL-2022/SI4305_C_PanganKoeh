@@ -27,7 +27,7 @@
                         <center><img src="{{ asset('storage/' . $isiInformasi->image) }}" class="img-fluid py-3" alt="{{ $isiInformasi->slug }}" style="height: 350px; width: 960px; object-fit: contain"></center>
                     </div>
                     @else
-                        <center><img src="{{ asset('frontend/gambar/logo-login-register.png') }}" class="img-fluid py-3" alt="Pangan-Koeh"></center>
+                        <center><img src="{{ asset('frontend/gambar/logo-navbar.png') }}" class="img-fluid py-3" alt="Pangan-Koeh"></center>
                     @endif
                     <div class="pt-4">
                         {!! $isiInformasi->body !!}
