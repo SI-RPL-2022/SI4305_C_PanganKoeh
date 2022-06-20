@@ -75,8 +75,11 @@ Route::middleware('admin')->group(function () {
     Route::get('/Informasi', [InformasiController::class, 'index']);
     Route::get('/Informasi/create', [InformasiController::class, 'create']);
     Route::post('/Informasi/store', [InformasiController::class, 'store']);
+    Route::get('/Informasi/edit/{informasi:id}', [InformasiController::class, 'edit']);
+    Route::post('/Informasi/update/{informasi:id}', [InformasiController::class, 'update']);
     Route::get('/Informasi/{informasi:slug}', [InformasiController::class, 'show']);
     Route::get('/Informasi/cekSlug/{judul}', [InformasiController::class, 'cekSlug']);
+    Route::post('/Informasi/delete/{id}', [InformasiController::class, 'destroy']);
 });
 
 Route::middleware('user')->group(function () {
@@ -92,6 +95,9 @@ Route::middleware('user')->group(function () {
     Route::resource('/DaftarVolunteer', RegisterVolunteerController::class);
     Route::resource('/InputDataPangan', InputPanganController::class);
     Route::resource('/PilihPasar', PilihPasarController::class);
+    Route::get('/Informasi', [InformasiController::class, 'index']);
+    Route::get('/Informasi/{informasi:slug}', [InformasiController::class, 'show']);
+    // Route::get('/PerbandinganHarga', [InformasiController::class, 'index']);
 });
 Route::get('/hargaPangan/{id}', [CobaChartController::class, 'barchart']);
 Route::get('/hargaPangan1/{id_pangan}/{id_pasar}', [CobaChartController::class, 'linechart']);

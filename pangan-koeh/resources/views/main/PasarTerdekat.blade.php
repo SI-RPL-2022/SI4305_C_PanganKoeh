@@ -8,7 +8,7 @@
     @include('layouts.navbarlogin')
     <div class="beranda">
         <center>
-            <h1 style="padding-top: 60px; padding-bottom: 30px; color: #677A68"><b>PASAR TERDEKAT</b></h1>
+        <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>PASAR TERDEKAT</b></h3>
             <div class="daftar-pasar container">
                 <form action="/PasarTerdekat" method="POST">
                     @csrf

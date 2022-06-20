@@ -7,12 +7,12 @@
 @section('content')
     @include('layouts.navbarlogin')
 
-    <div class="beranda">
+    <div class="beranda" style="padding-bottom: 200px">
         <section>
             <div class="container py-5">
                 <div class="title-page pb-5">
                     <center>
-                        <h2 style="color: #677A68">FAVORIT</h2>
+                    <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 10px"><b>FAVORIT</b></h3>
                     </center>
                 </div>
                 {{-- @php
