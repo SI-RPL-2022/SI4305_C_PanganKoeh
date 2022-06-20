@@ -239,6 +239,7 @@
       <center><hr class="batas shadow-lg" style="width: 80%;"></center>
 
       <section class="about py-5">
+      <a name="about py-5"></a>
         <center class="py-5">
           <h1 style="color: #677A68"><b>Tentang Kami</b></h1>
         </center>

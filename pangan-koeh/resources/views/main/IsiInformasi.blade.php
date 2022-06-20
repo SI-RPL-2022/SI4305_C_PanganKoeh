@@ -6,8 +6,9 @@
 
 @section('content')
     @include('layouts.navbarlogin')
+    <div class="beranda" style="padding-bottom: 100px">
     <section>
-        <div class="container py-5" style="max-width: 960px">
+        <div class="container py-5" style="max-width: 960px;">
             <article>
                 <div class="title-page pb-4">
                     <h1 class="pb-1" style="color: #677A68"><b>{{ $isiInformasi->judul }}</b></h1>
@@ -35,4 +36,5 @@
             </article>
         </div>
     </section>
+    </div>
 @endsection
