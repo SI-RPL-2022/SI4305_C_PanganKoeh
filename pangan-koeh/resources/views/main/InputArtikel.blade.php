@@ -12,7 +12,7 @@
         <div class="container" style="padding-top: 30px; padding-bottom: 160px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
-                    <form action="/Informasi/store" method="post" enctype="multipart/form-data" >
+                    <form action="/Informasi/store" method="post" enctype="multipart/form-data" enctype="multipart/form-data">
                         @csrf
                         <div class="row mt-3 mb-3">
                             <label for="judul" class="col-sm-2 col-form-label">Judul Artikel</label>
@@ -61,9 +61,14 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="gambarArtikel" class="col-sm-2 col-form-label">Gambar Artikel</label>
+                            <label for="image" class="col-sm-2 col-form-label">Gambar Artikel</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control" id="gambarArtikel" name="gambarArtikel">
+                                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                                @error('image')
+                                    <div style="text-align: left" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="mb-3">

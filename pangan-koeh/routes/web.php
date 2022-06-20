@@ -93,6 +93,8 @@ Route::middleware('user')->group(function () {
     Route::resource('/DaftarVolunteer', RegisterVolunteerController::class);
     Route::resource('/InputDataPangan', InputPanganController::class);
     Route::resource('/PilihPasar', PilihPasarController::class);
+    Route::get('/Informasi', [InformasiController::class, 'index']);
+    Route::get('/Informasi/{informasi:slug}', [InformasiController::class, 'show']);
 });
 Route::get('/hargaPangan/{id}', [CobaChartController::class, 'barchart']);
 Route::get('/hargaPangan1/{id_pangan}/{id_pasar}', [CobaChartController::class, 'linechart']);

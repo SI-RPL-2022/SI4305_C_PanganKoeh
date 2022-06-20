@@ -101,7 +101,7 @@
                   <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="\frontend\gambar\Informasi\4.png" style="height: 220px" id="card-informasi" class="img-fluid rounded-start" alt="...">
+                        <img src="{{ asset('storage/' . $informasi->image) }}" style="height: 220px; object-fit: cover" id="card-informasi" class="img-fluid rounded-start" alt="...">
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">

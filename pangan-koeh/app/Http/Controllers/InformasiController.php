@@ -47,8 +47,13 @@ class InformasiController extends Controller
             'judul' => 'required|max:255',
             'slug' => 'required|unique:informasis',
             'topik' => 'required',
+            'image' => 'image|file|max:2048',
             'body' => 'required'
         ]);
+
+        if ($request->file('image')) {
+            $validate['image'] = $request->file('image')->store('artikel-images');
+        }
 
         $validate['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
