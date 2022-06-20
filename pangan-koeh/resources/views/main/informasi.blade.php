@@ -101,7 +101,12 @@
                   <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="{{ asset('storage/' . $informasi->image) }}" style="height: 220px; object-fit: cover" id="card-informasi" class="img-fluid rounded-start" alt="...">
+                        @if ($informasi->image)
+                          <img src="{{ asset('storage/' . $informasi->image) }}" style="height: 220px; object-fit: cover" id="card-informasi" class="img-fluid rounded-start" alt="{{ $informasi->slug }}">
+                        @else
+                          <img src="{{ asset('frontend/gambar/logo-login-register.png') }}" style="height: 220px; object-fit: cover" class="img-fluid rounded-start" alt="Pangan-Koeh">
+                        @endif
+                            
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
