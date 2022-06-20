@@ -18,6 +18,7 @@ use App\Http\Controllers\InputPanganController;
 use App\Http\Controllers\PilihPasarController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\InformasiController;
+use App\Http\Controllers\PerbandinganHargaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,9 +45,9 @@ Route::get('/', [defController::class, 'index'])->name('pertama');
 Route::get('/InputArtikel', function () {
     return view('main.InputArtikel');
 });
-Route::get('/PerbandinganHarga', function () {
-    return view('main.PerbandinganHarga');
-});
+// Route::get('/PerbandinganHarga', function () {
+//     return view('main.PerbandinganHarga');
+// });
 Route::get('/MasterDataPasar', function () {
     return view('main.MasterDataPasar');
 });
@@ -87,6 +88,8 @@ Route::middleware('user')->group(function () {
     Route::post('/PasarTerdekat', [PasarTerdekatController::class, 'find']);
     Route::post('/Favourite', [defController::class, 'favourite']);
     Route::get('/favorit', [FavouriteController::class, 'index']);
+    Route::get('/PerbandinganHarga', [PerbandinganHargaController::class, 'index']);
+    Route::post('/perbandingan', [PerbandinganHargaController::class, 'perbandingan']);
     Route::get('/home', [HomeController::class, 'index']);
     Route::get('/DaftarVolunteer', [DaftarVolunteerController::class, 'index']);
     Route::post('/DaftarVolunteer', [DaftarVolunteerController::class, 'store']);

@@ -19,6 +19,7 @@
                 <div class="row mb-5 justify-content-center">
                     <div class="col-sm-4">
                         <select class="form-select" aria-label="Default select example" name="namaKomoditas">
+                            <option value="{{ $pangan[$id_komoditas-1]->id }}" selected>{{ $pangan[$id_komoditas-1]->name }}</option>
                             @foreach ($pangan as $item)
                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
@@ -33,6 +34,7 @@
                         <div class="row g-0"><center>
                             <div class="col-sm-6">
                                 <select class="form-select" aria-label="Default select example" name="pasar1">
+                                    <option value="{{ $pasar[$pasarr1-1]->id }}" selected>{{ $pasar[$pasarr1-1]->name }}</option>
                                     @foreach ($pasar as $item)
                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                     @endforeach
@@ -44,8 +46,8 @@
                                 <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title" style="font-size:15px"><b>Komoditas /kg</b></h5>
-                                <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. Harga,-</a>
+                                <h5 class="card-title" style="font-size:15px"><b>{{ $pasar1[$id_komoditas-1]->name }} /kg</b></h5>
+                                <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. {{ $pasar1[$id_komoditas-1]->harga }},-</a>
                             </div>
                         </div>
                     </div>
@@ -56,6 +58,7 @@
                         <div class="row g-0"><center>
                             <div class="col-sm-6">
                                 <select class="form-select" aria-label="Default select example" name="pasar2">
+                                    <option value="{{ $pasar[$pasarr2-1]->id }}" selected>{{ $pasar[$pasarr2-1]->name }}</option>
                                     @foreach ($pasar as $item)
                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                     @endforeach
@@ -67,8 +70,8 @@
                                 <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title" style="font-size:15px"><b>Komoditas /kg</b></h5>
-                                <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. Harga,-</a>
+                                <h5 class="card-title" style="font-size:15px"><b>{{ $pasar2[$id_komoditas-1]->name }} /kg</b></h5>
+                                <a href="#" class="btn"  style="background-color: #3CD3A6; color: white">Rp. {{ $pasar2[$id_komoditas-1]->harga }},-</a>
                             </div>
                         </div>
                     </div>
