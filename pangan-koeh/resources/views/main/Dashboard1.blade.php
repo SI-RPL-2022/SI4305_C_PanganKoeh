@@ -82,7 +82,7 @@ Pangankoeh
             </div>
             <div class="col-7 mx-2" id="display">
                 <div class="py-4">
-                        <a href="/hargaPangan/{{ $pasar->id }}" type="button" class="btn btn-primary rounded-pill py-2">Grafik Utama</a>
+                        <a href="/hargaPangan/{{ $pasar->id }}" type="button" class="btn btn-success rounded-pill py-2" style="padding-right: 30px; padding-left: 30px; margin-left: 20px; margin-top: 10px; background-color: #3CD3A6">Grafik Utama</a>
                     </div>
                 <div class="py-4" id="chart_div">
 

@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-7 mx-2" id="display">
                     <div class="py-4">
-                        <a href="/DetailPasar/{{ $pasar->id }}" type="button" class="btn btn-primary rounded-pill py-2">Detail Pasar</a>
+                        <a href="/DetailPasar/{{ $pasar->id }}" type="button" class="btn btn-success rounded-pill py-2" style="padding-right: 100px; padding-left: 100px; margin-top: 40px; margin-left: 250px; background-color: #3CD3A6">Detail Pasar</a>
                     </div>
                     
                     <div class="py-4" id="top_x_div">
