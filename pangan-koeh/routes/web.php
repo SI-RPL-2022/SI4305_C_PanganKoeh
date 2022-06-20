@@ -16,7 +16,7 @@ use App\Http\Controllers\RegisterVolunteerController;
 use App\Http\Controllers\PasarTerdekatController;
 use App\Http\Controllers\InputPanganController;
 use App\Http\Controllers\PilihPasarController;
-use App\Http\Controllers\FavoritController;
+use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\InformasiController;
 
 /*
@@ -53,9 +53,9 @@ Route::get('/MasterDataPasar', function () {
 Route::get('/MasterDataKomoditas', function () {
     return view('main.MasterDataKomoditas');
 });
-Route::get('/favorit', function () {
-    return view('main.favorit');
-});
+// Route::get('/favorit', function () {
+//     return view('main.favorit');
+// });
 
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -82,6 +82,8 @@ Route::middleware('admin')->group(function () {
 Route::middleware('user')->group(function () {
     Route::get('/PasarTerdekat', [PasarTerdekatController::class, 'index']);
     Route::post('/PasarTerdekat', [PasarTerdekatController::class, 'find']);
+    Route::post('/Favourite', [defController::class, 'favourite']);
+    Route::get('/favorit', [FavouriteController::class, 'index']);
     Route::get('/home', [HomeController::class, 'index']);
     Route::get('/DaftarVolunteer', [DaftarVolunteerController::class, 'index']);
     Route::post('/DaftarVolunteer', [DaftarVolunteerController::class, 'store']);

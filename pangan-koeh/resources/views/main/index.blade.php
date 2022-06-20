@@ -16,7 +16,13 @@
             {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        @endif
+      @endif
+      @if (session()->has('berhasil'))
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            {{ session('berhasil') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      @endif
       <section>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
@@ -56,63 +62,48 @@
               <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner" id="pangan">
+              {{-- @php
+                  dd($pangan);
+              @endphp --}}
               <div class="carousel-item active">
                 <div class="row">
+                  @foreach ($pasar1 as $item)
+                  @if ($item->id_komoditas < 4)
                   <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\2.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Beras Pandan Wangi /kg</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 12.813,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
+                      <h5 class="card-title" style="font-size:15px"><b>{{ $item->name }} /kg</b></h5> <!-- Dari database -->
+                      <div class="btn btn-group" style="cursor: default;width: 12rem;">
+                        <button type="button" class="btn" style="cursor:default; background-color: #3CD3A6; color: white">Rp. {{ $item->harga }},-</button>
+                        @if (Auth::user())
+                            {{-- <form action="/GakFavourite" method="POST">
+                              @csrf
+                              <input type="hidden" name="id_komoditas" id="id_komoditas" value="{{ $item->id_komoditas }}">
+                              <input type="hidden" name="user_id" id="user_id" value="{{ Auth::user()->id }}">
+                              <button type="submit" class="btn btn-danger">
+                                <i class="fa-solid fa-heart"></i>
+                              </button>
+                            </form> --}}
+                            <form action="/Favourite" method="POST">
+                              @csrf
+                              <input type="hidden" name="id_komoditas" id="id_komoditas" value="{{ $item->id_komoditas }}">
+                              <input type="hidden" name="user_id" id="user_id" value="{{ Auth::user()->id }}">
+                              <button type="submit" class="btn btn-danger">
+                                <i class="fa-regular fa-heart"></i>
+                              </button>
+                            </form>
+                        @else
+                            
+                        @endif
                       </div>
                     </div>
                   </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\3.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Cabe Hijau Besar /ons</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 4.000,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\4.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Daging Ayam Potong /kg</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 38.000,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\5.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Bawang Merah /ons</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  @endif
+                  @endforeach
                 </div>
               </div>
 
-              <div class="carousel-item">
+              {{-- <div class="carousel-item">
                 <div class="row">
                   <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
                     <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
@@ -167,62 +158,6 @@
                   </div>
                 </div>
               </div>
-
-              <div class="carousel-item">
-                <div class="row">
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\10.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Paprika /kg</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\13.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Sayur Kangkung /kg</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\14.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Bawang Bombay /kg</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div align="center" class="card h-100 mx-auto" style="width: 16rem;">
-                    <img src="frontend\gambar\Pangan\15.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px"><b>Daun Seledri /ons</b></h5>  <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <button class="carousel-control-prev" id="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -232,7 +167,7 @@
             <button class="carousel-control-next" id="right" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
-            </button>
+            </button> --}}
           </div>
       </section>
       

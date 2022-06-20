@@ -18,9 +18,6 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->index('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('id_pasar');
-            $table->index('id_pasar');
-            $table->foreign('id_pasar')->references('id')->on('markets')->onDelete('cascade');
             $table->foreignId('id_komoditas');
             $table->index('id_komoditas');
             $table->foreign('id_komoditas')->references('id')->on('pangans')->onDelete('cascade');
