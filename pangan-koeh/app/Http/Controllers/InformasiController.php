@@ -7,6 +7,7 @@ use App\Models\Pangan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Facades\Storage;
 
 class InformasiController extends Controller
 {
@@ -46,7 +47,7 @@ class InformasiController extends Controller
         $validate = $request ->validate([
             'judul' => 'required|max:255',
             'slug' => 'required|unique:informasis',
-            'topik' => 'required',
+            'category_id' => 'required',
             'image' => 'image|file|max:2048',
             'body' => 'required'
         ]);
@@ -56,6 +57,8 @@ class InformasiController extends Controller
         }
 
         $validate['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        //return($validate);
 
         Informasi::create($validate);
 
@@ -104,7 +107,8 @@ class InformasiController extends Controller
 
         $rules = [
             'judul' => 'required|max:255',
-            'topik' => 'required',
+            'category_id' => 'required',
+            'image' => 'image|file|max:2048',
             'body' => 'required'
         ];
 
@@ -114,16 +118,19 @@ class InformasiController extends Controller
 
         $validate = $request->validate($rules);
 
+        //return($validate);
+
+        if ($request->file('image')) {
+            if($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validate['image'] = $request->file('image')->store('artikel-images');
+        }
+
         $validate['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
         Informasi::where('id', $id)
-                    ->update([
-                        'judul' => $validate['judul'],
-                        'slug' => $validate['slug'],
-                        'category_id' => $validate['topik'],
-                        'excerpt' => $validate['excerpt'],
-                        'body' => $validate['body']
-                    ]);
+                    ->update($validate);
 
         return redirect('/Informasi')->with('success', 'Artikel baru berhasil diperbarui!');
     }
@@ -136,6 +143,12 @@ class InformasiController extends Controller
      */
     public function destroy($id)
     {
+        $artikel = Informasi::where('id', $id)->first();
+
+        if($artikel->image) {
+            Storage::delete($artikel->image);
+        }
+
         Informasi::destroy($id);
 
         return redirect('/Informasi')->with('success', 'Artikel berhasil dihapus!');

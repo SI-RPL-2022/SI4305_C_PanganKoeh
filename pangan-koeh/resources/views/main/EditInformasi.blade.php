@@ -12,7 +12,7 @@
         <div class="container" style="padding-top: 30px; padding-bottom: 160px" align="center">
             <div class="card" style="width: 65rem;">
                 <div class="card-body" style="padding-top: 10px;">
-                    <form action="/Informasi/update/{{ $info->id }}" method="post" enctype="multipart/form-data" >
+                    <form action="/Informasi/update/{{ $info->id }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mt-3 mb-3">
                             <label for="judul" class="col-sm-2 col-form-label">Judul Artikel</label>
@@ -37,9 +37,9 @@
                             </div>
                         </div>
                         <div class="row mt-3 mb-3">
-                            <label for="topik" class="col-sm-2 col-form-label">Topik</label>
+                            <label for="category_id" class="col-sm-2 col-form-label">Topik</label>
                             <div class="col-sm-10">
-                                <select class="form-select" name="topik" id="topik">
+                                <select class="form-select" name="category_id" id="category_id">
                                     @foreach ($categories as $category)
                                         @if (old('topik', $info->category_id) == $category->id)
                                             <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
@@ -62,8 +62,19 @@
                         </div>
                         <div class="row mb-3">
                             <label for="gambarArtikel" class="col-sm-2 col-form-label">Gambar Artikel</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control" id="gambarArtikel" name="gambarArtikel">
+                            <div class="col-sm-10" style="">
+                                <input type="hidden" name="oldImage" value="{{ $info->image }}">
+                                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" onchange="previewImage()">
+                                @error('image')
+                                    <div style="text-align: left" class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                @if ($info->image)
+                                <img src="{{ asset('storage/' . $info->image) }}" style="height: 200px; object-fit: cover;text-align: left" class="img-preview img-fluid pt-2">
+                                @else
+                                    <img style="height: 200px; object-fit: cover;text-align: left" class="img-preview img-fluid pt-2">
+                                @endif
                             </div>
                         </div>
                         <div class="mb-3">
@@ -88,5 +99,19 @@
         document.addEventListener("trix-file-accept", function(e) {
             e.preventDefault();
         })
+
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
     </script>
  @endsection

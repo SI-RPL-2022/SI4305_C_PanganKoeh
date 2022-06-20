@@ -37,9 +37,9 @@
                             </div>
                         </div>
                         <div class="row mt-3 mb-3">
-                            <label for="topik" class="col-sm-2 col-form-label">Topik</label>
+                            <label for="category_id" class="col-sm-2 col-form-label">Topik</label>
                             <div class="col-sm-10">
-                                <select class="form-select" name="topik" id="topik">
+                                <select class="form-select" name="category_id" id="category_id">
                                     @foreach ($categories as $category)
                                         @if (old('topik') == $category->id)
                                             <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
@@ -47,7 +47,7 @@
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endif
                                     @endforeach
-                                  </select>
+                                </select>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -62,13 +62,14 @@
                         </div>
                         <div class="row mb-3">
                             <label for="image" class="col-sm-2 col-form-label">Gambar Artikel</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                            <div class="col-sm-10" style="">
+                                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" onchange="previewImage()">
                                 @error('image')
                                     <div style="text-align: left" class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                 @enderror
+                                <img style="height: 200px; object-fit: cover;text-align: left" class="img-preview img-fluid pt-2">
                             </div>
                         </div>
                         <div class="mb-3">
@@ -93,5 +94,20 @@
         document.addEventListener("trix-file-accept", function(e) {
             e.preventDefault();
         })
+
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
+        
     </script>
  @endsection
