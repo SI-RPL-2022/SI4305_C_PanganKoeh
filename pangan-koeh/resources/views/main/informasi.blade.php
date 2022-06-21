@@ -30,7 +30,7 @@
                 <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>BERITA TERKINI</b></h3>
                 </center>
             </div>
-            <div class="body-page">
+            <div class="body-page" style="padding-left: 60px">
               <div class="row row-cols-1 row-cols-md-2 g-1">
                 <div class="col">
                     <div class="card mb-3" style="max-width: 540px;">
