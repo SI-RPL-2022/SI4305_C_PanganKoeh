@@ -9,12 +9,12 @@
 
     <div class="beranda" style="padding-bottom: 200px">
         <section>
-            {{-- @if (session()->has('berhasil'))
+            @if (session()->has('berhasil'))
             <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
                 {{ session('berhasil') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            @endif --}}
+            @endif
             <div class="container py-5">
                 <div class="title-page pb-5">
                     <center>
@@ -34,10 +34,17 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-size:15px; text-align:center"><b>{{ $item->name }} /kg</b></h5> <!-- Dari database -->
                                     <center><div class="btn btn-group" style="width: 12rem;">
-                                    <button class="btn" style="background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
-                                    <a href="" class="btn btn-danger">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
+                                    <form action="/hapus" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $item->id }}">
+                                        <input type="hidden" name="id_komoditas" value="{{ $item->id_komoditas }}">
+                                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
+                                        <button type="submit" class="btn btn-danger">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </button>
+                                    </form>
+                                    
                                     </div><center>
                                 </div>
                             </div>
