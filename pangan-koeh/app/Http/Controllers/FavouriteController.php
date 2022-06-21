@@ -17,12 +17,14 @@ class FavouriteController extends Controller
         $auth = Auth::id();
         $market1 = DB::select(DB::raw("SELECT DISTINCT prices.id_komoditas,pangans.name,prices.id_pasar, prices.tanggal,prices.harga from pangans,prices,(SELECT id_komoditas,id_pasar,max(tanggal) as tanggal FROM `prices` WHERE id_pasar = 1 GROUP BY id_komoditas) as max_harga WHERE prices.id_komoditas = max_harga.id_komoditas AND prices.tanggal = max_harga.tanggal AND prices.id_pasar = max_harga.id_pasar AND prices.id_komoditas = pangans.id GROUP BY id_komoditas"));
         $market2 = DB::select(DB::raw("SELECT DISTINCT prices.id_komoditas,pangans.name,prices.id_pasar, prices.tanggal,prices.harga from pangans,prices,(SELECT id_komoditas,id_pasar,max(tanggal) as tanggal FROM `prices` WHERE id_pasar = 2 GROUP BY id_komoditas) as max_harga WHERE prices.id_komoditas = max_harga.id_komoditas AND prices.tanggal = max_harga.tanggal AND prices.id_pasar = max_harga.id_pasar AND prices.id_komoditas = pangans.id GROUP BY id_komoditas"));
+        $fav = DB::select(DB::raw("SELECT favourites.id_komoditas,pangans.name,pangans.gambar,CAST(AVG(prices.harga) AS INT) AS ratarata FROM prices,pangans,favourites WHERE pangans.id = favourites.id_komoditas AND favourites.user_id = $auth AND prices.id_komoditas = favourites.id_komoditas GROUP BY favourites.id_komoditas"));
         return view('main.favorit', [
             'test' => $test,
             'pangan' => Pangan::all(),
             'market1' => $market1,
             'market2' => $market2,
-            'pasar' => Market::all()
+            'pasar' => Market::all(),
+            'fav' => $fav
         ]);
     }
 }

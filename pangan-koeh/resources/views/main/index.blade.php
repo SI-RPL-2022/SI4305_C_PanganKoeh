@@ -58,79 +58,43 @@
 
           <div class="container">
             <div class="row row-cols-1 row-cols-md-4 g-4">
-              <div class="col">
-                <div class="card h-100 mx-auto" style="width: 16rem;">
-                  <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                  <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px; text-align:center"><b>Gula Gulaku /kg</b></h5> <!-- Dari database -->
-                      <center><div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div><center>
+              @if (Auth::user())
+                @foreach ($test as $item)
+                <div class="col">
+                  <div class="card h-100 mx-auto" style="width: 16rem;">
+                    <img src="{{ asset('storage/' . $item->gambar) }}" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size:15px; text-align:center"><b>{{ $item->name }} /kg</b></h5> <!-- Dari database -->
+                        <center><div class="btn btn-group" style="width: 12rem;">
+                          <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
+                          <form action="/Favourite" method="POST">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                            <input type="hidden" name="id_komoditas" value="{{ $item->id_komoditas }}">
+                            <button  type="submit" class="btn btn-danger">
+                              <i class="fa-regular fa-heart"></i>
+                            </button>
+                          </form>
+                        </div><center>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100 mx-auto" style="width: 16rem;">
-                  <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                  <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px; text-align:center"><b>Gula Gulaku /kg</b></h5> <!-- Dari database -->
-                      <center><div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div><center>
+                @endforeach
+              @else
+                @foreach ($test as $item)
+                <div class="col">
+                  <div class="card h-100 mx-auto" style="width: 16rem;">
+                    <img src="{{ asset('storage/' . $item->gambar) }}" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size:15px; text-align:center"><b>{{ $item->name }} /kg</b></h5> <!-- Dari database -->
+                        <center><div class="btn btn-group" style="width: 12rem;">
+                          <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
+                        </div><center>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100 mx-auto" style="width: 16rem;">
-                  <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                  <div class="card-body">
-                    <h5 class="card-title" style="font-size:15px; text-align:center"><b>Gula Gulaku /kg</b></h5> <!-- Dari database -->
-                    <center><div class="btn btn-group" style="width: 12rem;">
-                      <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                      <a href="" class="btn btn-danger">
-                        <i class="fa-regular fa-heart"></i>
-                      </a>
-                    </div><center>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100 mx-auto" style="width: 16rem;">
-                  <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                  <div class="card-body">
-                      <h5 class="card-title" style="font-size:15px; text-align:center"><b>Gula Gulaku /kg</b></h5> <!-- Dari database -->
-                      <center><div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div><center>
-                  </div>
-              </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 mx-auto" style="width: 16rem;">
-                  <img src="frontend\gambar\Pangan\6.png" id="card-Beranda" class="card-img-top" alt="..." width="100%" height="120px" style="padding-top: 20px">
-                  <center><div class="card-body">
-                      <h5 class="card-title" style="font-size:15px; text-align:center"><b>Gula Gulaku /kg</b></h5> <!-- Dari database -->
-                      <div class="btn btn-group" style="width: 12rem;">
-                        <button class="btn" style="background-color: #3CD3A6; color: white">Rp. 3.200,-</button> <!-- Dari database -->
-                        <a href="" class="btn btn-danger">
-                          <i class="fa-regular fa-heart"></i>
-                        </a>
-                      </div><center>
-                  </div>
-              </div>
+                @endforeach
+              @endif
             </div>
           </div>             
       </section>

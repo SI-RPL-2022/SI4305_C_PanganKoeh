@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('harga');
             $table->string('tanggal');
             $table->string('kontributor');
+            $table->string('status');
             $table->string('gambarpasar')->nullable();
             $table->rememberToken();
             $table->timestamps();
