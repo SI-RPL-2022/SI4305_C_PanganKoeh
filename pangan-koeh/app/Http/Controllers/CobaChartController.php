@@ -19,16 +19,21 @@ class CobaChartController extends Controller
             $data .= "['" . $pangan[($item->id_komoditas) - 1]->name . "', " . $item->harga . "],";
         }
         // dd($data);
+        // $test = Market::find($id);
+        // dd($test);
         $chartData = $data;
         return view('main.Dashboard', [
-            'pasar' => Market::find($id),
+            'pasar1' => Market::find($id),
             'pangan' => Pangan::all(),
             'grafik' => $result,
-            'data' => $chartData
+            'data' => $chartData,
+            'pasar' => Market::all()
         ]);
     }
     public function linechart($id_pangan, $id_pasar)
     {
+        $panganspes = DB::select(DB::raw("SELECT * FROM `pangans` WHERE id = $id_pangan "));
+        // dd($panganspes);
         $tes = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE id_pasar = $id_pasar AND id_komoditas= $id_pangan ORDER BY `prices`.`tanggal` DESC"));
         $result = DB::select(DB::raw("SELECT id_pasar,id_komoditas,harga,tanggal FROM `prices` WHERE id_komoditas = $id_pangan AND id_pasar= $id_pasar group by tanggal ORDER BY `prices`.`tanggal` ASC"));
         $data = "";
@@ -38,11 +43,12 @@ class CobaChartController extends Controller
         // dd($data);
         $chartData = $data;
         return view('main.Dashboard1', [
-            'pasar' => Market::find($id_pasar),
+            'pasar1' => Market::find($id_pasar),
             'pangan' => Pangan::all(),
-            'panganspes' => Pangan::find($id_pangan),
+            'panganspes' => $panganspes,
             'grafik' => $chartData,
-            'tes' => $tes
+            'tes' => $tes,
+            'pasar' => Market::all()
         ]);
     }
 }

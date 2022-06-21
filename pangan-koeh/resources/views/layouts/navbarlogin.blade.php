@@ -30,8 +30,9 @@
             Pasar
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/DetailPasar/1">Pasar Kosambi</a></li>
-              <li><a class="dropdown-item" href="/DetailPasar/2">Pasar Kiaracondong</a></li>
+            @foreach ($pasar as $item)
+              <li><a class="dropdown-item" href="/DetailPasar/{{ $item->id }}">{{ $item->name }}</a></li>
+            @endforeach
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/PasarTerdekat">Pasar Terdekat</a></li>
           </ul>

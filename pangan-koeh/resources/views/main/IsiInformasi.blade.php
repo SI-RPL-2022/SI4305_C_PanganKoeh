@@ -30,7 +30,7 @@
                         <center><img src="{{ asset('frontend/gambar/logo-navbar.png') }}" class="img-fluid py-3" alt="Pangan-Koeh"></center>
                     @endif
                     <div class="pt-4">
-                        {!! $isiInformasi->body !!}
+                        <p>{!! $isiInformasi->body !!}</p>
                     </div>
                 </div>
             </article>

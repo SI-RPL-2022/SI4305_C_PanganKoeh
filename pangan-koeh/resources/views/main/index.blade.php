@@ -66,9 +66,10 @@
                     <div class="card-body">
                         <h5 class="card-title" style="font-size:15px; text-align:center"><b>{{ $item->name }} /kg</b></h5> <!-- Dari database -->
                         <center><div class="btn btn-group" style="width: 12rem;">
-                          <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
-                          <form action="/Favourite" method="POST">
-                            @csrf
+                          
+                            <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
+                            <form action="/Favourite" method="POST">
+                              @csrf
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                             <input type="hidden" name="id_komoditas" value="{{ $item->id_komoditas }}">
                             <button  type="submit" class="btn btn-danger">
@@ -87,9 +88,10 @@
                     <div class="card-body">
                         <h5 class="card-title" style="font-size:15px; text-align:center"><b>{{ $item->name }} /kg</b></h5> <!-- Dari database -->
                         <center><div class="btn btn-group" style="width: 12rem;">
-                          <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
-                          <form action="/Favourite" method="POST">
-                            @csrf
+                          
+                            <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
+                            <form action="/Favourite" method="POST">
+                              @csrf
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                             <input type="hidden" name="id_komoditas" value="{{ $item->id_komoditas }}">
                             <button  type="submit" class="btn btn-danger">

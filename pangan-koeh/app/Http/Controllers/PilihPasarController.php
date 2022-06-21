@@ -15,7 +15,9 @@ class PilihPasarController extends Controller
      */
     public function index()
     {
-        return view('main.PilihPasar');
+        return view('main.PilihPasar', [
+            'pasar' => Market::all()
+        ]);
     }
 
     /**
@@ -42,7 +44,8 @@ class PilihPasarController extends Controller
         // dd($data);
         return view('main.InputDataPangan', [
             'pangan' => Pangan::all(),
-            'id' => $request->namapasar
+            'id' => $request->namapasar,
+            'pasar' => Market::all()
         ]);
     }
 

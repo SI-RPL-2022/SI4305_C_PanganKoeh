@@ -24,6 +24,6 @@ class InputKomoditasController extends Controller
         Pangan::create($validatedData);
         // dd($validatedData);
         $request->session()->flash('success', 'Komoditas Berhasil Diinput!');
-        return redirect('/MasterDataKomoditas');
+        return redirect('/MasterDataKomoditas')->with(['pasar' => Market::all()]);
     }
 }

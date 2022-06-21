@@ -9,7 +9,9 @@ class InputPasarController extends Controller
 {
     public function index()
     {
-        return view('main.MasterDataPasar');
+        return view('main.MasterDataPasar', [
+            'pasar' => Market::all()
+        ]);
     }
     public function inputpasar(Request $request)
     {
@@ -31,6 +33,8 @@ class InputPasarController extends Controller
         Market::create($validatedData);
 
         $request->session()->flash('success', 'Pasar Berhasil Diinput!');
-        return redirect('/MasterDataPasar');
+        return redirect('/MasterDataPasar')->with([
+            'pasar' => Market::all()
+        ]);
     }
 }

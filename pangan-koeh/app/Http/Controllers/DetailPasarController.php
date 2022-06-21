@@ -21,7 +21,8 @@ class DetailPasarController extends Controller
         // dd(compact($result));
         return view('main.DetailPasar', [
             'result' => $result,
-            'pasar' => Market::find($id),
+            'pasar' => Market::all(),
+            'pasar1' => Market::find($id),
             'pangan' => Pangan::all()
         ]);
     }

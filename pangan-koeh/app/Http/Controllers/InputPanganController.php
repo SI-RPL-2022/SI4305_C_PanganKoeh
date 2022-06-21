@@ -17,7 +17,9 @@ class InputPanganController extends Controller
      */
     public function index()
     {
-        return view('main.InputDataPangan');
+        return view('main.InputDataPangan', [
+            'pasar' => Market::all()
+        ]);
     }
 
     /**
@@ -57,7 +59,7 @@ class InputPanganController extends Controller
         // return $validatedData;
         Price::create($validatedData);
         $request->session()->flash('success', 'Data Harga Pangan Berhasil Diinput!');
-        return redirect('/');
+        return redirect('/')->with(['pasar' => Market::all()]);
     }
 
     /**

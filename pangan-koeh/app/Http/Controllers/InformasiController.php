@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Informasi;
 use App\Models\Pangan;
+use App\Models\Market;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
@@ -19,9 +20,9 @@ class InformasiController extends Controller
     public function index()
     {
         return view('main.informasi', [
-            "informasis" => Informasi::all()
+            "informasis" => Informasi::all(),
+            'pasar' => Market::all()
         ]);
-
     }
 
     /**
@@ -32,7 +33,8 @@ class InformasiController extends Controller
     public function create()
     {
         return view('main.InputArtikel', [
-            'categories' => Pangan::all()
+            'categories' => Pangan::all(),
+            'pasar' => Market::all()
         ]);
     }
 
@@ -44,7 +46,7 @@ class InformasiController extends Controller
      */
     public function store(Request $request)
     {
-        $validate = $request ->validate([
+        $validate = $request->validate([
             'judul' => 'required|max:255',
             'slug' => 'required|unique:informasis',
             'category_id' => 'required',
@@ -62,7 +64,7 @@ class InformasiController extends Controller
 
         Informasi::create($validate);
 
-        return redirect('/Informasi')->with('success', 'Artikel baru berhasil ditambahkan!');
+        return redirect('/Informasi')->with(['success', 'Artikel baru berhasil ditambahkan!', 'pasar' => Market::all()]);
     }
 
     /**
@@ -73,8 +75,9 @@ class InformasiController extends Controller
      */
     public function show(Informasi $informasi)
     {
-        return view('main.IsiInformasi',[
-            "isiInformasi" => $informasi
+        return view('main.IsiInformasi', [
+            "isiInformasi" => $informasi,
+            'pasar' => Market::all()
         ]);
     }
 
@@ -90,7 +93,8 @@ class InformasiController extends Controller
 
         return view('main.EditInformasi', [
             "info" => $dataInfo,
-            'categories' => Pangan::all()
+            'categories' => Pangan::all(),
+            'pasar' => Market::all()
         ]);
     }
 
@@ -121,7 +125,7 @@ class InformasiController extends Controller
         //return($validate);
 
         if ($request->file('image')) {
-            if($request->oldImage) {
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
             $validate['image'] = $request->file('image')->store('artikel-images');
@@ -130,9 +134,9 @@ class InformasiController extends Controller
         $validate['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
         Informasi::where('id', $id)
-                    ->update($validate);
+            ->update($validate);
 
-        return redirect('/Informasi')->with('success', 'Artikel baru berhasil diperbarui!');
+        return redirect('/Informasi')->with(['success', 'Artikel baru berhasil diperbarui!', 'pasar' => Market::all()]);
     }
 
     /**
@@ -145,13 +149,13 @@ class InformasiController extends Controller
     {
         $artikel = Informasi::where('id', $id)->first();
 
-        if($artikel->image) {
+        if ($artikel->image) {
             Storage::delete($artikel->image);
         }
 
         Informasi::destroy($id);
 
-        return redirect('/Informasi')->with('success', 'Artikel berhasil dihapus!');
+        return redirect('/Informasi')->with(['success', 'Artikel berhasil dihapus!', 'pasar' => Market::all()]);
     }
 
     public function cekSlug(Request $request)

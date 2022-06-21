@@ -41,7 +41,8 @@ class FavouriteController extends Controller
         Favourite::destroy($request->id);
         $request->session()->flash('berhasil', 'Komoditas Berhasil Dihapus Dari Favourite!');
         return redirect('/favorit')->with([
-            'fav' => $fav
+            'fav' => $fav,
+            'pasar' => Market::all()
         ]);
     }
 }

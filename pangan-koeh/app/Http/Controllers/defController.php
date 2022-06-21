@@ -27,7 +27,8 @@ class defController extends Controller
             return view('main.index', [
                 'test' => $test,
                 'test2' => $test2,
-                'fav' => $fav
+                'fav' => $fav,
+                'pasar' => Market::all()
             ]);
         }
 
@@ -37,6 +38,7 @@ class defController extends Controller
         // $test = Favourite::where('user_id', Auth::user()->id)->get();
         return view('main.index', [
             'test' => $test,
+            'pasar' => Market::all()
         ]);
     }
 
@@ -60,7 +62,8 @@ class defController extends Controller
         return redirect('/')->with([
             'fav' => $fav,
             'test' => $test,
-            'test2' => $test2
+            'test2' => $test2,
+            'pasar' => Market::all()
         ]);
         // return view('main.index', [
 

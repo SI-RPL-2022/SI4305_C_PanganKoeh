@@ -6,6 +6,7 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\Market;
 use App\Models\Volunteer;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +16,8 @@ class ApprovalController extends Controller
     {
         return view('main.approval', [
             'users' => User::whereNotNull('role')->get(),
-            'volunteers' => Volunteer::all()
+            'volunteers' => Volunteer::all(),
+            'pasar' => Market::all()
         ]);
     }
     public function terima(Request $request)
@@ -27,7 +29,9 @@ class ApprovalController extends Controller
         $data->save();
         $datav[0]->save();
 
-        return redirect('/approval');
+        return redirect('/approval')->with([
+            'pasar' => Market::all()
+        ]);
     }
     public function tolak(Request $request)
     {
@@ -37,7 +41,9 @@ class ApprovalController extends Controller
         $data->role = 'USER';
         $data->save();
 
-        return redirect('/approval');
+        return redirect('/approval')->with([
+            'pasar' => Market::all()
+        ]);
     }
 
     public function active(Request $request)
@@ -49,7 +55,9 @@ class ApprovalController extends Controller
         $data->save();
         $datav[0]->save();
 
-        return redirect('/DataVolunteer');
+        return redirect('/DataVolunteer')->with([
+            'pasar' => Market::all()
+        ]);
     }
 
     public function inactive(Request $request)
@@ -61,6 +69,8 @@ class ApprovalController extends Controller
         $data->save();
         $datav[0]->save();
 
-        return redirect('/DataVolunteer');
+        return redirect('/DataVolunteer')->with([
+            'pasar' => Market::all()
+        ]);
     }
 }

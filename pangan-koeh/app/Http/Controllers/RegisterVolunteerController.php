@@ -68,7 +68,7 @@ class RegisterVolunteerController extends Controller
         $data->save();
         // auth()->user()->role == "WAIT";
 
-        return redirect('Profile');
+        return redirect('Profile')->with(['pasar' => Market::all()]);
         // return $request;
     }
 
@@ -92,7 +92,8 @@ class RegisterVolunteerController extends Controller
     public function edit($id)
     {
         return view('main.UbahProfile', [
-            'user' => User::where('id', $id)->get()
+            'user' => User::where('id', $id)->get(),
+            'pasar' => Market::all()
         ]);
     }
 
@@ -112,7 +113,7 @@ class RegisterVolunteerController extends Controller
             'alamat' => 'required|max:255',
         ]);
         User::where('id', $request->id)->update($validatedData);
-        return redirect('/Profile');
+        return redirect('/Profile')->with(['pasar' => Market::all()]);
     }
 
     /**
