@@ -95,6 +95,7 @@ Route::middleware('user')->group(function () {
     Route::post('/Favourite', [defController::class, 'favourite']);
     Route::get('/favorit', [FavouriteController::class, 'index']);
     Route::post('/hapus', [FavouriteController::class, 'hapus']);
+    Route::post('/hapus1', [FavouriteController::class, 'hapus1']);
     Route::get('/PerbandinganHarga', [PerbandinganHargaController::class, 'index']);
     Route::post('/perbandingan', [PerbandinganHargaController::class, 'perbandingan']);
     Route::get('/home', [HomeController::class, 'index']);

@@ -68,8 +68,9 @@
                         <center><div class="btn btn-group" style="width: 12rem;">
                           
                             <button class="btn" style="cursor: default;background-color: #3CD3A6; color: white">Rp. {{ $item->ratarata }},-</button> <!-- Dari database -->
-                            <form action="/Favourite" method="POST">
+                          <form action="/hapus1" method="POST">
                               @csrf
+                            <input type="hidden" name="id" value="{{ $item->id }}">
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                             <input type="hidden" name="id_komoditas" value="{{ $item->id_komoditas }}">
                             <button  type="submit" class="btn btn-danger">
