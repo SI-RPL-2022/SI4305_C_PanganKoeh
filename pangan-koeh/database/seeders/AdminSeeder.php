@@ -157,6 +157,17 @@ class AdminSeeder extends Seeder
 
         \App\Models\Price::insert([
             [
+                'id_pasar' => '2',
+                'id_komoditas' => '2',
+                'harga' => '60000',
+                'tanggal' => '2022-04-14',
+                'kontributor' => 'Muthi',
+                'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
+            ]
+        ]);
+
+        \App\Models\Price::insert([
+            [
                 'id_pasar' => '1',
                 'id_komoditas' => '4',
                 'harga' => '57500',
