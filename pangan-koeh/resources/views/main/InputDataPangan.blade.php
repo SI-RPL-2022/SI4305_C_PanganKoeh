@@ -15,7 +15,7 @@
                     <form action="/InputDataPangan" method="post" enctype="multipart/form-data" >
                         @csrf
                         <input type="hidden" name="id_pasar" id="id_pasar" value="{{ $id }}">
-                        <div class="row mb-3">
+                        <div class="row mb-3" style="padding-top: 15px">
                             <label for="namapangan" class="col-sm-2 col-form-label">Nama Pangan</label>
                             <div class="col-sm-10">
                                 <select class="form-select" aria-label="Default select example" name="namapangan">

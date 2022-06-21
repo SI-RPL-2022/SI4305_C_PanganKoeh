@@ -38,12 +38,12 @@
           <a class="nav-link" href="/PerbandinganHarga">Perbandingan Harga</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <!-- <form class="d-flex">
         <div class="input-group">
           <input class="form-control" type="search" placeholder="Search" aria-label="Search">
           <button class="btn" style="background-color: #3CD3A6" type="submit"><i class="bi bi-search" style="color: white"></i></button>
         </div>
-      </form>
+      </form> -->
       <div class="span2">
         <a class="btn btn-success rounded-pill mx-3" type="button" style="background-color: #3CD3A6; width:90.47px" href="/login">Login</a>
         <a class="btn btn-success rounded-pill me-3" type="button" style="background-color: #3CD3A6" href="/register">Register</a>

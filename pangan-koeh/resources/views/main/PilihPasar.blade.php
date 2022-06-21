@@ -7,14 +7,14 @@
 @section('content')
     @include('layouts.navbarlogin')
 
-    <div class="beranda">
+    <div class="beranda" style="padding-bottom: 200px">
     <h3 align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px; padding-top: 50px"><b>PILIH PASAR</b></h3>
     <div class="container" style="padding-top: 60px; padding-bottom: 130px" align="center">
     <div class="card" style="width: 65rem;">
         <div class="card-body" style="padding-top: 10px;">
             <form action="/PilihPasar" method="post" enctype="multipart/form-data" >
                 @csrf
-                <div class="row mb-3">
+                <div class="row mb-3" style="padding-top: 15px">
                     <label for="namapasar" class="col-sm-2 col-form-label">Nama Pasar</label>
                     <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select example" name="namapasar">
