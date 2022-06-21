@@ -33,16 +33,16 @@
                                 <div class="galeri">
                                     <div class="row row-cols-2">
                                         <div class="col pb-3">
-                                            <img src="frontend\gambar\pasar\kircon1.jpg" id="fotoPasar" alt="">
+                                            <img src="{{ asset('frontend/gambar/pasar/kircon1.jpg') }}" id="fotoPasar" alt="">
                                         </div>
                                         <div class="col pb-3">
-                                            <img src="frontend\gambar\pasar\kircon2.jpg" id="fotoPasar" alt="">
+                                            <img src="{{ asset('frontend/gambar/pasar/kircon2.jpg') }}" id="fotoPasar" alt="">
                                         </div>
                                         <div class="col pb-3">
-                                            <img src="frontend\gambar\pasar\kircon3.jpg" id="fotoPasar" alt="">
+                                            <img src="{{ asset('frontend/gambar/pasar/kircon3.jpg') }}" id="fotoPasar" alt="">
                                         </div>
                                         <div class="col pb-3">
-                                            <img src="frontend\gambar\pasar\kircon4.jpg" id="fotoPasar" alt="">
+                                            <img src="{{ asset('frontend/gambar/pasar/kircon4.jpg') }}" id="fotoPasar" alt="">
                                         </div>
                                     </div>
                                 </div>

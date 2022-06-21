@@ -51,7 +51,7 @@
         dd($grafik);
     @endphp --}}
     <div class="beranda">
-        <div class="container" style="padding-top: 80px; padding-bottom: 80px">
+        <div class="container-fluid" style="padding-top: 80px; padding-bottom: 80px">
             <div class="row justify-content-around">
                 <div class="col-4" id="display">
                     <div class="mx-2 py-4" id="infoPasar">
@@ -67,16 +67,16 @@
                             <div class="galeri">
                                 <div class="row row-cols-2">
                                     <div class="col pb-3">
-                                        <img src="frontend\gambar\pasar\kircon1.jpg" id="fotoPasar" alt="">
+                                        <img src="{{ asset('frontend/gambar/pasar/kircon1.jpg') }}" id="fotoPasar" alt="">
                                     </div>
                                     <div class="col pb-3">
-                                        <img src="frontend\gambar\pasar\kircon2.jpg" id="fotoPasar" alt="">
+                                        <img src="{{ asset('frontend/gambar/pasar/kircon2.jpg') }}" id="fotoPasar" alt="">
                                     </div>
                                     <div class="col pb-3">
-                                        <img src="frontend\gambar\pasar\kircon3.jpg" id="fotoPasar" alt="">
+                                        <img src="{{ asset('frontend/gambar/pasar/kircon3.jpg') }}" id="fotoPasar" alt="">
                                     </div>
                                     <div class="col pb-3">
-                                        <img src="frontend\gambar\pasar\kircon4.jpg" id="fotoPasar" alt="">
+                                        <img src="{{ asset('frontend/gambar/pasar/kircon4.jpg') }}" id="fotoPasar" alt="">
                                     </div>
                                 </div>
                             </div>
