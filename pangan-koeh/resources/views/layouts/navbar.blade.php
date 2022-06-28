@@ -30,8 +30,9 @@
             Pasar
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/hargaPangan">Pasar A</a></li>
-            <li><a class="dropdown-item" href="/hargaPangan">Pasar B</a></li>
+            @foreach ($pasar as $item)
+              <li><a class="dropdown-item" href="/DetailPasar/{{ $item->id }}">{{ $item->name }}</a></li>
+            @endforeach
           </ul>
         </li>
         <li class="nav-item">

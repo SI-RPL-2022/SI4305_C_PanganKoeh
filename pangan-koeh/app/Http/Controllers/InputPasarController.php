@@ -25,10 +25,10 @@ class InputPasarController extends Controller
             'foto3' => 'image|file|max:3072',
             'foto4' => 'image|file|max:3072',
         ]);
-        $validatedData['foto1'] = $request->file('foto1')->store('post-images');
-        $validatedData['foto2'] = $request->file('foto2')->store('post-images');
-        $validatedData['foto3'] = $request->file('foto3')->store('post-images');
-        $validatedData['foto4'] = $request->file('foto4')->store('post-images');
+        $validatedData['foto1'] = $request->file('foto1')->store('post-images/Pasar');
+        $validatedData['foto2'] = $request->file('foto2')->store('post-images/Pasar');
+        $validatedData['foto3'] = $request->file('foto3')->store('post-images/Pasar');
+        $validatedData['foto4'] = $request->file('foto4')->store('post-images/Pasar');
         // dd($validatedData);
         Market::create($validatedData);
 

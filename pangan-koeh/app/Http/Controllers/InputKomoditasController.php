@@ -20,7 +20,7 @@ class InputKomoditasController extends Controller
             'name' => 'required|max:255',
             'gambar' => 'image|file|max:3072'
         ]);
-        $validatedData['gambar'] = $request->file('gambar')->store('post-images');
+        $validatedData['gambar'] = $request->file('gambar')->store('post-images/Pangan');
         Pangan::create($validatedData);
         // dd($validatedData);
         $request->session()->flash('success', 'Komoditas Berhasil Diinput!');

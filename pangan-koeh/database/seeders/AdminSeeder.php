@@ -41,6 +41,10 @@ class AdminSeeder extends Seeder
                 'name' => 'Pasar Kosambi',
                 'kecamatan' => 'Sumur Bandung',
                 'alamat' => 'Jl. A. Yani No.221-223, Kb. Pisang, Kota Bandung, Jawa Barat 40112',
+                'foto1' => 'post-images/Pasar/kosambi1.jpg',
+                'foto2' => 'post-images/Pasar/kosambi2.jpg',
+                'foto3' => 'post-images/Pasar/kosambi3.jpg',
+                'foto4' => 'post-images/Pasar/kosambi4.jpeg',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -49,12 +53,17 @@ class AdminSeeder extends Seeder
                 'name' => 'Pasar Kiaracondong',
                 'kecamatan' => 'Kiaracondong',
                 'alamat' => 'Jl. Jend. Ibrahim Adjie, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281',
+                'foto1' => 'post-images/Pasar/kircon1.jpg',
+                'foto2' => 'post-images/Pasar/kircon2.jpg',
+                'foto3' => 'post-images/Pasar/kircon3.jpg',
+                'foto4' => 'post-images/Pasar/kircon4.jpg',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
         \App\Models\Pangan::insert([
             [
                 'name' => 'Bawang Merah',
+                'gambar' => 'post-images/Pangan/5.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -62,6 +71,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Bawang Putih',
+                'gambar' => 'post-images/Pangan/bawangPutih.jpg',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -69,6 +79,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Cabai Merah',
+                'gambar' => 'post-images/Pangan/11.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -76,6 +87,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Cabai Rawit',
+                'gambar' => 'post-images/Pangan/9.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -83,6 +95,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Daging Ayam',
+                'gambar' => 'post-images/Pangan/4.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -90,6 +103,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Daging Sapi',
+                'gambar' => 'post-images/Pangan/8.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -97,6 +111,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Gula Pasir',
+                'gambar' => 'post-images/Pangan/7.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -104,6 +119,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Minyak Goreng',
+                'gambar' => 'post-images/Pangan/1.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -111,6 +127,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Telur Ayam',
+                'gambar' => 'post-images/Pangan/telurAyam.jpeg',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
@@ -118,6 +135,7 @@ class AdminSeeder extends Seeder
         \App\Models\Pangan::insert([
             [
                 'name' => 'Beras',
+                'gambar' => 'post-images/Pangan/2.png',
                 'created_at' => \Carbon\Carbon::now('Asia/Jakarta')
             ]
         ]);
