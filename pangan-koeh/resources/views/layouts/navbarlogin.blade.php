@@ -68,7 +68,7 @@
             <li><a class="dropdown-item" href="/approval">Approval</a></li>
             <li><a class="dropdown-item" href="/Informasi/create">Input Artikel</a></li>
             <li><a class="dropdown-item" href="/MasterDataPasar">Input Data Pasar</a></li>
-            <li><a class="dropdown-item" href="/MasterDataKomoditas">Input Data Komoditas</a></li>
+            <li><a class="dropdown-item" href="/MasterDataKomoditas">Master Data Komoditas</a></li>
           @elseif (Auth::user()->fresh()->role == 'VLNTR')
             <li><a class="dropdown-item" href="/PilihPasar/create">Input Data Pangan</a></li>
           @endif

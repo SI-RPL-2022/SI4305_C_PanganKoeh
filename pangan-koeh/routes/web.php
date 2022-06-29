@@ -75,6 +75,10 @@ Route::middleware('admin')->group(function () {
     Route::post('/active', [ApprovalController::class, 'active']);
     Route::post('/inactive', [ApprovalController::class, 'inactive']);
     Route::get('/MasterDataKomoditas', [InputKomoditasController::class, 'index']);
+    Route::get('/MasterDataKomoditas/create', [InputKomoditasController::class, 'create']);
+    Route::get('/MasterDataKomoditas/edit/{komo:id}', [InputKomoditasController::class, 'edit']);
+    Route::post('/MasterDataKomoditas/update/{komo:id}', [InputKomoditasController::class, 'update']);
+    Route::post('/MasterDataKomoditas/delete/{id}', [InputKomoditasController::class, 'destroy']);
     Route::post('/inputkomoditas', [InputKomoditasController::class, 'inputkomoditas']);
     Route::get('/MasterDataPasar', [InputPasarController::class, 'index']);
     Route::post('/inputpasar', [InputPasarController::class, 'inputpasar']);
