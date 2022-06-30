@@ -63,7 +63,7 @@ class InformasiController extends Controller
         //return($validate);
 
         Informasi::create($validate);
-
+        session()->flash('success', 'Artikel baru berhasil ditambahkan!');
         return redirect('/Informasi')->with(['success', 'Artikel baru berhasil ditambahkan!', 'pasar' => Market::all()]);
     }
 
@@ -135,7 +135,7 @@ class InformasiController extends Controller
 
         Informasi::where('id', $id)
             ->update($validate);
-
+        session()->flash('success', 'Artikel baru berhasil diperbarui!');
         return redirect('/Informasi')->with(['success', 'Artikel baru berhasil diperbarui!', 'pasar' => Market::all()]);
     }
 
@@ -154,7 +154,7 @@ class InformasiController extends Controller
         }
 
         Informasi::destroy($id);
-
+        session()->flash('success', 'Artikel berhasil dihapus!');
         return redirect('/Informasi')->with(['success', 'Artikel berhasil dihapus!', 'pasar' => Market::all()]);
     }
 

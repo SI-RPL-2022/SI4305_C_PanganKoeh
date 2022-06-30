@@ -9,7 +9,9 @@
 
     <div class="beranda" align="center">
     <h3 class="pt-5" align="center" style="color: #677A68; font-family: scada; font-style: normal; font-weight: 400; line-height: 32px;"><b>BANDINGKAN HARGA KOMODITAS</b></h1>
-        <a href="">Lihat Semua Komoditas ></a>
+        @if (Auth::user()->fresh()->role == 'ADM')
+            <a href="/MasterDataKomoditas">Lihat Semua Komoditas ></a>
+        @endif
         <div class="container" style="padding-top: 30px; padding-bottom: 130px">
             <form action="/perbandingan" method="POST">
             @csrf
