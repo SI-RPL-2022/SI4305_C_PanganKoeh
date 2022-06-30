@@ -41,7 +41,7 @@
                         </div>
                         <div class="row g-0" style="padding-top: 20px">
                             <div class="card mx-auto" style="width: 12rem">
-                                <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
+                                <img src="{{ asset('storage/post-images/Pangan/5.png') }}" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size:15px"><b>Komoditas /kg</b></h5>
@@ -64,7 +64,7 @@
                         </div>
                         <div class="row g-0" style="padding-top: 20px">
                             <div class="card mx-auto" style="width: 12rem">
-                                <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
+                                <img src="{{ asset('storage/post-images/Pangan/5.png') }}" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size:15px"><b>Komoditas /kg</b></h5>

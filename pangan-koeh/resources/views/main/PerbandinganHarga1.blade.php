@@ -43,7 +43,7 @@
                         </div>
                         <div class="row g-0" style="padding-top: 20px">
                             <div class="card mx-auto" style="width: 12rem">
-                                <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
+                                <img src="{{ asset('storage/' . $pasar1[$id_komoditas-1]->gambar) }}" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size:15px"><b>{{ $pasar1[$id_komoditas-1]->name }} /kg</b></h5>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="row g-0" style="padding-top: 20px">
                             <div class="card mx-auto" style="width: 12rem">
-                                <img src="frontend\gambar\Pangan\8.png" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
+                                <img src="{{ asset('storage/' . $pasar2[$id_komoditas-1]->gambar) }}" id="card-Beranda" class="card-img-top" alt="..." style="width:100%">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size:15px"><b>{{ $pasar2[$id_komoditas-1]->name }} /kg</b></h5>
